@@ -25,3 +25,8 @@ yarn-error.log*
 
 # SASS 
 *.map
+
+#images 
+/src/components/images/
+ 
+/src/components/icons/
