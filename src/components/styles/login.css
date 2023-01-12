@@ -63,6 +63,7 @@
 }
 .login_container .body .form-section .form-width form .forgot-password {
   color: #39CDCC;
+  font-weight: 600;
   font-size: 14px;
   margin: 20px 0px;
 }
@@ -72,4 +73,7 @@
   font-size: 14px;
   font-weight: 600;
   border: none;
+}
+.login_container .body .form-section .form-width form button:hover {
+  background-color: #30bdbc;
 }/*# sourceMappingURL=login.css.map */

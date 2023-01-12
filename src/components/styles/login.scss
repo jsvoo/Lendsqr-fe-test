@@ -1,19 +1,19 @@
-$primary : #39CDCC;
-$light : #ffffff;
-$primary-font :12px;
-$font-sizes: ("small": 12px, "normal": 14px, "big":18px, "large": 24px);
+// $primary : #39CDCC;
+// $light : #ffffff;
+// $primary-font :12px;
+// $font-sizes: ("small": 12px, "normal": 14px, "big":18px, "large": 24px);
 
-@mixin input-style {
-    width: 90%;
-    padding: 15px;
-    border: 2px solid rgba(84, 95, 125, 0.15); 
-    outline: none;
-    border-radius: 5px;
-}
+// @mixin input-style {
+//     width: 90%;
+//     padding: 15px;
+//     border: 2px solid rgba(84, 95, 125, 0.15); 
+//     outline: none;
+//     border-radius: 5px;
+// }
 
+@import "_variables";
 
-
-;
+ 
 
 .login_container {
     * {
@@ -94,11 +94,15 @@ $font-sizes: ("small": 12px, "normal": 14px, "big":18px, "large": 24px);
                         font-size: map-get($font-sizes, "small" );
                         position: relative;
                         left: -55px;
+                        // position: absolute;
+                        // top: 64.5%;
+                        // left: 78%;
                         font-weight: 600;
                     }
 
                     .forgot-password {
                         color: $primary;
+                        font-weight: 600;
                         font-size: map-get($map: $font-sizes, $key:"normal" );
                         margin: 20px 0px;
                     }
@@ -110,6 +114,10 @@ $font-sizes: ("small": 12px, "normal": 14px, "big":18px, "large": 24px);
                         font-size: $primary-font +2px;
                         font-weight: 600;
                         border: none;
+
+                        &:hover{
+                            background-color: darken($primary, 5%);
+                        }
                     }
                 }
             }
