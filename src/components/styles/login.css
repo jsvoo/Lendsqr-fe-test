@@ -1,6 +1,75 @@
-.login_container {
-  color: red;
+.login_container * {
+  font-family: "Avenir Next Cyr";
 }
-.login_container p {
-  color: green;
+.login_container .logo-section {
+  width: 173px;
+  margin: 70px;
+}
+.login_container .logo-section img {
+  width: 100%;
+}
+.login_container .body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login_container .body .banner-section, .login_container .body .form-section {
+  width: 50%;
+  margin: auto;
+  background-image: url(../images/Rectangle.png);
+}
+.login_container .body .banner-section .banner img, .login_container .body .form-section .banner img {
+  width: 100%;
+}
+.login_container .body .form-section {
+  background-image: none;
+  background-color: #ffffff;
+  padding: 30px;
+}
+.login_container .body .form-section .header {
+  margin-bottom: 50px;
+}
+.login_container .body .form-section .header .welcome {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 55px;
+  letter-spacing: -0.04em;
+  color: #213F7D;
+}
+.login_container .body .form-section .form-width {
+  width: 85%;
+  margin: auto;
+}
+.login_container .body .form-section .form-width form {
+  width: 90%;
+}
+.login_container .body .form-section .form-width form .input-container {
+  margin: 20px 0px;
+}
+.login_container .body .form-section .form-width form input, .login_container .body .form-section .form-width form button {
+  width: 90%;
+  padding: 15px;
+  border: 2px solid rgba(84, 95, 125, 0.15);
+  outline: none;
+  border-radius: 5px;
+}
+.login_container .body .form-section .form-width form .show {
+  color: #39CDCC;
+  font-size: 12px;
+  position: relative;
+  left: -55px;
+  font-weight: 600;
+}
+.login_container .body .form-section .form-width form .forgot-password {
+  color: #39CDCC;
+  font-size: 14px;
+  margin: 20px 0px;
+}
+.login_container .body .form-section .form-width form button {
+  background-color: #39CDCC;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
 }/*# sourceMappingURL=login.css.map */

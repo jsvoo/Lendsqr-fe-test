@@ -1,4 +1,124 @@
-.login_container{
-    color: red;
-    p{color: green;}
+$primary : #39CDCC;
+$light : #ffffff;
+$primary-font :12px;
+$font-sizes: ("small": 12px, "normal": 14px, "big":18px, "large": 24px);
+
+@mixin input-style {
+    width: 90%;
+    padding: 15px;
+    border: 2px solid rgba(84, 95, 125, 0.15); 
+    outline: none;
+    border-radius: 5px;
+}
+
+
+
+;
+
+.login_container {
+    * {
+        font-family: 'Avenir Next Cyr';
+    }
+
+    .logo-section {
+        width: 173px;
+        margin: 70px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .banner-section {
+            width: 50%;
+            margin: auto;
+            background-image: url(../images/Rectangle.png);
+
+
+
+            .banner {
+                img {
+                    width: 100%;
+                }
+            }
+
+
+
+
+        }
+
+        .form-section {
+            @extend .banner-section;
+            background-image: none;
+            background-color: #ffffff;
+            padding: 30px;
+
+            .header {
+                margin-bottom: 50px;
+
+                .welcome {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 40px;
+                    line-height: 55px;
+
+                    letter-spacing: -0.04em;
+
+                    color: #213F7D;
+                }
+            }
+
+            .form-width {
+                width: 85%;
+                margin: auto;
+
+
+                form {
+                    width: 90%;
+
+                    .input-container {
+                        margin: 20px 0px;
+                    }
+
+                    input {
+                        @include input-style
+                    }
+
+                    .show {
+                        color: $primary;
+                        font-size: map-get($font-sizes, "small" );
+                        position: relative;
+                        left: -55px;
+                        font-weight: 600;
+                    }
+
+                    .forgot-password {
+                        color: $primary;
+                        font-size: map-get($map: $font-sizes, $key:"normal" );
+                        margin: 20px 0px;
+                    }
+
+                    button {
+                        @extend input;
+                        background-color: $primary;
+                        color: $light;
+                        font-size: $primary-font +2px;
+                        font-weight: 600;
+                        border: none;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+
+
+
 }
