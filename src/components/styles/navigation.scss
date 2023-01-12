@@ -1,2 +1,63 @@
-@import "_variables"
+@import "_variables";
  
+
+.navigation-body, .input, .docs-section, .profile-section{
+    @include flex-align-center;
+    @include justify-evenly;
+}
+
+.navigation-body{
+    width: 96%;
+    margin: auto;
+    padding: 10px;
+    background-color: $light;  
+   .logo-section{
+    width: 20%;
+   }
+   .search-section{
+    width: 40%; 
+
+    .input{
+        justify-content: center;
+        input{
+            @include input-style;
+            width: 70%;
+            padding: 10px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        .icon{
+            background-color: $primary;
+            color: $light;
+            padding: 11.6px;
+            @include flex-center-center;
+            border-bottom-right-radius:5px;
+            border-top-right-radius:5px;
+        }
+
+
+    }
+   }
+   .docs-section{
+    width: 40%;
+    color: $text-primary;
+    a{color: $text-primary;} 
+    @include justify-end;
+    gap: 20px;
+   }
+
+   .profile-section{
+    gap: 20px;
+
+    .avatar{
+        width: 50px; 
+        border-radius: 100%; 
+        img{
+            width: 100%;   
+            border-radius: 100%;
+            @include flex-center-center; 
+        }
+    }
+   }
+}

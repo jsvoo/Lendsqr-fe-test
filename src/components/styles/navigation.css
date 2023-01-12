@@ -1,1 +1,65 @@
-/*# sourceMappingURL=navigation.css.map */
+.navigation-body, .input, .docs-section, .profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navigation-body {
+  width: 96%;
+  margin: auto;
+  padding: 10px;
+  background-color: #ffffff;
+}
+.navigation-body .logo-section {
+  width: 20%;
+}
+.navigation-body .search-section {
+  width: 40%;
+}
+.navigation-body .search-section .input {
+  justify-content: center;
+}
+.navigation-body .search-section .input input {
+  width: 90%;
+  padding: 15px;
+  border: 2px solid rgba(84, 95, 125, 0.15);
+  outline: none;
+  border-radius: 5px;
+  width: 70%;
+  padding: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.navigation-body .search-section .input .icon {
+  background-color: #39CDCC;
+  color: #ffffff;
+  padding: 11.6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.navigation-body .docs-section {
+  width: 40%;
+  color: #213F7D;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.navigation-body .docs-section a {
+  color: #213F7D;
+}
+.navigation-body .profile-section {
+  gap: 20px;
+}
+.navigation-body .profile-section .avatar {
+  width: 50px;
+  border-radius: 100%;
+}
+.navigation-body .profile-section .avatar img {
+  width: 100%;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=navigation.css.map */

@@ -1,5 +1,6 @@
 $primary : #39CDCC;
 $light : #ffffff;
+$text-primary:#213F7D;
 $primary-font :12px;
 $font-sizes: ("small": 12px, "normal": 14px, "big":18px, "large": 24px);
 
@@ -9,4 +10,36 @@ $font-sizes: ("small": 12px, "normal": 14px, "big":18px, "large": 24px);
     border: 2px solid rgba(84, 95, 125, 0.15); 
     outline: none;
     border-radius: 5px;
+}
+
+@mixin flex-align-center{
+    display: flex;
+    align-items: center; 
+}
+
+
+@mixin flex {
+    display: flex;
+}
+
+@mixin flex-center-center{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+@mixin justify-center{
+    justify-content: center;
+}
+@mixin justify-end{
+    justify-content: flex-end;
+}
+@mixin justify-start{
+    justify-content: flex-start;
+}
+@mixin justify-between{
+    justify-content: space-between;
+}
+@mixin justify-evenly{
+    justify-content: space-evenly;
 }

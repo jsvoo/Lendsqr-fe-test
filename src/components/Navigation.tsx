@@ -1,13 +1,14 @@
 import "./styles/navigation.css"
 import logo from "./images/logo.svg"
-import bell from "./images/bell.png"
-import avatar from "./images/avatar.jpg"
+import bell from "./images/bell.png" 
+import avatar1 from "./images/avatar.png"
 import { Link } from "react-router-dom";
 import {AiOutlineSearch, AiFillCaretDown} from"react-icons/ai"
 
 export default function Navigation(){
     return(
-        <div className="navigation-container">
+        <nav className="navigation-container">
+            <div className="navigation-body">
             <div className="logo-section">
                 <img src={logo} alt="lendsqr logo" />
 
@@ -15,7 +16,7 @@ export default function Navigation(){
 
             <div className="search-section">
                 <div className="input">
-                    <input type="search" placeholder="Search for anything" /> <span><AiOutlineSearch/></span>
+                    <input type="search" placeholder="Search for anything" /> <div className="icon"><AiOutlineSearch/></div>
                 </div>
 
             </div>
@@ -28,16 +29,17 @@ export default function Navigation(){
 
                 <div className="profile-section">
                     <div className="avatar">
-                        <img src={avatar} alt="User avatar" />
+                        <img src={avatar1} alt="User avatar" />
                     </div>
 
                     <div className="dropdown">
-                      <span>Adedeji <div className="icon"><AiFillCaretDown/></div></span>
+                      <span>Adedeji <span className="icon"><AiFillCaretDown/></span></span>
                     </div>
                 </div>
 
             </div>
             
         </div>
+        </nav>
     )
 }
