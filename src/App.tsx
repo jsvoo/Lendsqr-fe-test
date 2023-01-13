@@ -7,6 +7,7 @@ import Sidebar from './components/Sidebar';
 import Cards from './components/props/Cards';
 import User_table from './components/props/User_table';
 import Filter from './components/props/Filter';
+import Options from './components/props/Options';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
    <Navigation/>
    <Sidebar/>
    <Filter/>
+   <Options/>
 
    <Routes>
     <Route element={<Login/>} path="/" />
