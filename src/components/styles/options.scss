@@ -1,16 +1,27 @@
 @import "_variables";
 
 .options-container{
-    color: green; 
+    color: $text-primary; 
 
     padding: 10px;
     box-shadow: 0px 0px 5px 1px grey;
     position: absolute;
     top: 47.8%;
-    left: 80%;
+    left: 85%;
     border-radius: 4px;
-    width: 260px;
+    width: 200px;
     background-color: $light;
     z-index: 1;
     font-size: 14px;
+
+    .option{
+        @include flex-align-center; 
+        padding: 10px;
+        gap: 10px;
+
+        img{
+            @include flex-center-center
+        }
+
+    }
 }
