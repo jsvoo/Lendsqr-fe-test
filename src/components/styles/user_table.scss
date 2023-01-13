@@ -22,18 +22,18 @@
 
 
     table {
-        padding: 20px;
+        padding: 15px;
         font-family: "Work Sans";
         font-style: normal;
         border-collapse: collapse;
-        width: 97%;
+        width: 98%;
         margin: auto;
         text-align: left;
 
         thead {
             td {
                 font-weight: 600;
-                padding: 50px 15px;
+                padding: 40px 10px;
                 font-size: map-get($map: $font-sizes, $key: "small");
 
                 .icon {

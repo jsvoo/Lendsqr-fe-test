@@ -5,7 +5,7 @@
 
 .sidebar-container {
   font-family: "Work Sans";
-  width: 20%;
+  width: 21%;
   padding: 40px 20px;
   position: fixed;
   top: 50px;
@@ -22,8 +22,8 @@
   display: flex;
   align-items: center;
   color: #2c53a5;
-  gap: 20px;
-  margin: 20px 0px;
+  gap: 10px;
+  margin: 10px 0px;
 }
 .sidebar-container .sidebar-item .text {
   font-size: 16px;
