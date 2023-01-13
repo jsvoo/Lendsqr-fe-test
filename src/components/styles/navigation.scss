@@ -4,6 +4,7 @@
 .navigation-body, .input, .docs-section, .profile-section{
     @include flex-align-center;
     @include justify-evenly;
+    font-family: "Work Sans";
 }
 
 .navigation-body{
