@@ -1,3 +1,39 @@
-.sidebar-container{ 
+@import "_variables";
+
+.flex-center-center {
+    @include flex-align-center
+}
+
+.sidebar-container {
     font-family: "Work Sans";
+    width: 20%;
+    padding: 30px; 
+
+    .head{
+        font-size: map-get($map: $font-sizes, $key:"normal" ) !important;
+        font-weight: 500 !important;
+        margin-top: 25px
+    }
+
+    .sidebar-item {
+        @include flex-align-center;
+        color: lighten($text-primary, 10%);
+        gap: 20px;
+        margin: 20px 0px;
+
+        .text {
+            font-size: map-get($map: $font-sizes, $key: "mid");
+            line-height: 1cm;
+            font-weight: 100;
+            font-style: normal; 
+
+            .icon {
+                font-size: map-get($map: $font-sizes, $key: "normal");
+                margin-left: 5px;
+                color: $text-primary;
+                width: map-get($map: $font-sizes, $key: "mid");
+            }
+
+        }
+    }
 }
