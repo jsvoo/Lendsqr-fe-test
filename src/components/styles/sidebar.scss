@@ -7,7 +7,13 @@
 .sidebar-container {
     font-family: "Work Sans";
     width: 20%;
-    padding: 30px; 
+    padding: 40px 20px;  
+    position: fixed; 
+    top: 50px;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #FEFEFE;
+
 
     .head{
         font-size: map-get($map: $font-sizes, $key:"normal" ) !important;

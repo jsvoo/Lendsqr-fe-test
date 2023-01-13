@@ -25,6 +25,8 @@ yarn-error.log*
 
 # SASS 
 *.map
+*.css
+.css*
 
 #images 
 /src/components/images/
