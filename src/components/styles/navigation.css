@@ -2,10 +2,6 @@ body {
   background-color: #E5E5E5;
 }
 
-.navigation-container {
-  z-index: 1 !important;
-}
-
 .navigation-body, .input, .docs-section, .profile-section {
   display: flex;
   align-items: center;
@@ -18,7 +14,7 @@ body {
   right: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
   margin: auto;
   padding: 10px 50px;
   background-color: #ffffff;
