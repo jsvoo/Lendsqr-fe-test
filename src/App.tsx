@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Login from './components/pages/Login';
+import User_details from './components/pages/User_details';
 import Navigation from './components/Navigation';
 import Sidebar from './components/Sidebar';
 import Cards from './components/props/Cards';
@@ -14,14 +15,14 @@ function App() {
    <BrowserRouter>
    <Navigation/>
    <Sidebar/>
-   <Filter/>
-   <Options/>
+   {/* <Filter/>
+   <Options/> */}
 
    <Routes>
     <Route element={<Login/>} path="/" />
     <Route element={< Cards />} path="cards" />
     <Route element={<User_table/>} path="table" />
-    <Route element={<Filter/>} path="filter" />
+    <Route element={<User_details />} path="details" />
    </Routes>
    </BrowserRouter>
   );
