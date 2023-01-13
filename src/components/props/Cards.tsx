@@ -3,11 +3,7 @@ import d_users from "../icons/d_users.png";
 import active_users from "../icons/active_users.png";
 import loaned_users from "../icons/loaned_users.png";
 import saving_users from "../icons/saving_users.png";
-import filter from "../icons/filter.png";
-import more from "../icons/more.png";
-import prev from "../icons/prev.png";
-import next from "../icons/next.png";
-import period from "../icons/period.png";
+
 export default function Cards() {
     return (
         <div className="cards-container">
