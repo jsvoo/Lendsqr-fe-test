@@ -4,6 +4,14 @@ $text-primary:#213F7D;
 $primary-font :12px;
 $font-sizes: ("small": 12px, "normal": 14px, "mid":16px, "big":18px, "large": 24px);
 
+@mixin button($boarder, $bg-color, $color) {
+    padding: 10px 30px;
+    color: $color;
+    border-radius: 7px;
+    border: $boarder;
+    background-color: $bg-color;
+    font-weight: 600; 
+}
 @mixin input-style {
     width: 90%;
     padding: 15px;
