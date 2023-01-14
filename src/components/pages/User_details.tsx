@@ -163,7 +163,7 @@ export default function User_details() {
                                 <tr>
                                     <td>grace@lendsqr.com</td>
                                     <td > ₦200,000.00 -  ₦400,000.00</td>
-                                    <td>Parent's Apartment</td>
+                                    <td>₦40,000</td>
                                 </tr>
                             </tbody>
                         </table>
