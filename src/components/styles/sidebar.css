@@ -36,4 +36,21 @@
   margin-left: 5px;
   color: #213F7D;
   width: 16px;
+}
+
+@media (max-width: 425px) {
+  .sidebar-container {
+    z-index: 1;
+    width: 80%;
+  }
+  .sidebar-container .sidebar-item {
+    margin: 5px 0px;
+    cursor: pointer;
+  }
+  .sidebar-container .sidebar-item .text {
+    font-size: 14px;
+    line-height: 1cm;
+    font-weight: 100;
+    font-style: normal;
+  }
 }/*# sourceMappingURL=sidebar.css.map */

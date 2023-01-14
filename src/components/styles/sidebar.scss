@@ -44,3 +44,26 @@
         }
     }
 }
+
+
+@media(max-width:425px){
+    .sidebar-container {
+        z-index: 1;
+        width: 80%;
+
+        .sidebar-item {
+            margin: 5px 0px;
+            cursor: pointer;
+            .text {
+                font-size: 14px;
+                line-height: 1cm;
+                font-weight: 100;
+                font-style: normal;
+            }
+
+
+        }
+            
+        
+    }
+}

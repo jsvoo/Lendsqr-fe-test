@@ -231,7 +231,37 @@
             width: 90%;
 
             flex-wrap: wrap;
-            width: 100% !important;
+            width: 100% ;
+
+          
+        }
+
+        .profile-details-navigation{
+            .profile-header{ 
+
+                gap: 0px;
+                padding: 0px;
+                flex-direction: column;
+               
+                .amount-section, .tier-section, .avatar-name-section{
+                    width: 80%;
+                    gap: 0;
+                    
+
+                    .account-details{ 
+                        // word-wrap: break-word;
+                    }
+
+                    .name, .amount{
+                        // font-size: 13px; 
+                    }
+                   
+                }
+                .avatar-name-section{
+                    width: 90%;
+                    gap: 15px;
+                }
+               }
         }
 
         table{
