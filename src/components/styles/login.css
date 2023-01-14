@@ -78,6 +78,28 @@
   background-color: #30bdbc;
 }
 
+@media (max-width: 430px) {
+  .body {
+    flex-direction: column;
+  }
+  .login_container .body .banner-section, .login_container .body .form-section {
+    width: 95%;
+    margin: auto;
+  }
+  .login_container .body .banner-section .input-container, .login_container .body .form-section .input-container {
+    width: 100%;
+  }
+  .login_container .body .banner-section .form-width, .login_container .body .form-section .form-width {
+    width: 100%;
+  }
+  .login_container .body .banner-section .form-width form, .login_container .body .form-section .form-width form {
+    width: 100%;
+  }
+  .login_container .logo-section {
+    width: 150px;
+    margin: 30px;
+  }
+}
 @media (max-width: 1123px) {
   .login_container .body .form-section .form-width form .show {
     left: 70%;
