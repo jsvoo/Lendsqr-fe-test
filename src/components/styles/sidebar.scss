@@ -45,9 +45,32 @@
     }
 }
 
+// .sidebar-toggle-off,  .sidebar-toggle-on{display: none;}
 
-@media(max-width:425px){
-    .sidebar-container {
+@media(max-width:425px){ 
+    .sidebar-toggle-on{
+        display: block;
+        position: fixed; 
+        top: 22%; 
+        color: $text-primary;
+        font-weight: 800;
+        font-size: 24px;
+        background-color: transparent;
+        border: none;
+    }
+     .sidebar-toggle-off{ 
+        display: block;
+        position: fixed; 
+        top: 22%; 
+        color: $text-primary;
+        font-weight: 800;
+        font-size: 24px;
+        background-color: transparent;
+        border: none;
+        left: 77%; 
+     
+    }
+    .sidebar-container { 
         z-index: 1;
         width: 80%;
 

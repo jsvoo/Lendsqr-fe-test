@@ -8,7 +8,7 @@ export default function User_details() {
     return (
         <div className="userdetails-container">
 
-            <div className="header-section">
+            {/* <div className="header-section">
                 <div className="back-to-users">
                     <div className="back-image">
                         <img src={back_img} alt="Back" />
@@ -28,7 +28,7 @@ export default function User_details() {
                         <button>ACTIVATE USER</button>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
             <div className="profile-details-navigation">
