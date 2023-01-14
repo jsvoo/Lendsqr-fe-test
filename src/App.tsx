@@ -13,8 +13,8 @@ import Options from './components/props/Options';
 function App() {
   return (
    <BrowserRouter>
-   <Navigation/>
-   <Sidebar/>
+   {/* <Navigation/>
+   <Sidebar/> */}
    {/* <Filter/>
    <Options/> */}
 

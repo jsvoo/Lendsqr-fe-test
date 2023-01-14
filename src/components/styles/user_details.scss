@@ -1,6 +1,8 @@
 @import "cards.scss";
 @import "_variables";
-
+.table-container{
+    overflow-x: scroll
+}
 .userdetails-container {
     @extend .cards-container;
     width: 70%;
@@ -157,6 +159,7 @@
     padding: 20px 40px;
     margin-top: 30px; 
     background-color: $light;
+    
     .infomation{
         margin: 30px 0px; 
         box-shadow: 0 2px 2px -2px gray;

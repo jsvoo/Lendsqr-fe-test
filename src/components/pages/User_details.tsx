@@ -89,6 +89,7 @@ export default function User_details() {
                     <div className="personal infomation">
                         <p>Personal information</p>
 
+                        <div className="table-container">
                         <table>
                             <thead>
                                 <tr>
@@ -124,6 +125,7 @@ export default function User_details() {
                                 </tr>
                             </tbody>
                         </table>
+                        </div>
 
 
                     </div>
@@ -131,7 +133,8 @@ export default function User_details() {
                     <div className="education infomation">
                         <p>Education and Employment</p>
 
-                        <table>
+                       <div className="table-container">
+                       <table>
                             <thead>
                                 <tr>
                                     <td>LEVEL OF EDUCATION</td>
@@ -165,57 +168,62 @@ export default function User_details() {
                             </tbody>
                         </table>
 
+                       </div>
 
                     </div>
 
-  <div className="socials infomation">
+                    <div className="socials infomation">
                         <p>Socials</p>
+                        <div className="table-container">
 
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>TWITTER</td>
-                                    <td>FACEBOOK</td>
-                                    <td> INSTAGRAM</td> 
-                                    {/* <td className="hide"> INSTAGRAM</td> 
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>TWITTER</td>
+                                        <td>FACEBOOK</td>
+                                        <td> INSTAGRAM</td>
+                                        {/* <td className="hide"> INSTAGRAM</td> 
                                     <td className="hide"> INSTAGRAM</td>  */}
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>@grace_effiom</td>
-                                    <td>@grace_effiom</td>
-                                    <td>@grace_effiom</td> 
-                                    {/* <td className="hide">@grace_effiom</td> 
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>@grace_effiom</td>
+                                        <td>@grace_effiom</td>
+                                        <td>@grace_effiom</td>
+                                        {/* <td className="hide">@grace_effiom</td> 
                                     <td className="hide">@grace_effiom</td>  */}
-                                </tr>
-                            </tbody> 
-                        </table>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
 
                     </div>
 
-  <div className="guarantor infomation">
+                    <div className="guarantor infomation">
                         <p>Guarantor</p>
 
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>FULL NAME</td>
-                                    <td> PHONE NUMBER</td>
-                                    <td>EMAIL ADDRESS</td>
-                                    <td>RELATIONSHIP</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Debby Ogana</td>
-                                    <td>07060780922</td>
-                                    <td>debby@gmail.com</td>
-                                    <td>Sister</td>
-                                </tr>
-                            </tbody> 
-                        </table>
+                        <div className="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>FULL NAME</td>
+                                        <td> PHONE NUMBER</td>
+                                        <td>EMAIL ADDRESS</td>
+                                        <td>RELATIONSHIP</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Debby Ogana</td>
+                                        <td>07060780922</td>
+                                        <td>debby@gmail.com</td>
+                                        <td>Sister</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
 
                     </div>
