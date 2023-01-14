@@ -11,6 +11,7 @@ $font-sizes: ("small": 12px, "normal": 14px, "mid":16px, "big":18px, "large": 24
     border: $boarder;
     background-color: $bg-color;
     font-weight: 600; 
+    cursor: pointer;
 }
 @mixin input-style {
     width: 90%;
