@@ -76,4 +76,11 @@
 }
 .login_container .body .form-section .form-width form button:hover {
   background-color: #30bdbc;
+}
+
+@media (max-width: 1123px) {
+  .login_container .body .form-section .form-width form .show {
+    left: 70%;
+    top: -35px;
+  }
 }/*# sourceMappingURL=login.css.map */
