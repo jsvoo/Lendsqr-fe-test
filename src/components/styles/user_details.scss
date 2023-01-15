@@ -219,7 +219,23 @@
     .userdetails-container {
         width: 90%;
         margin: auto; 
-        left: 0;
+        left: 0; 
+
+        .header-section {
+            .details-buttons-section { 
+                flex-direction: column-reverse;
+                // margin: 10px 0px;
+                gap: 20px;
+               
+                .buttons{
+                    button:first-child,button:last-child{
+                        padding: 10px ;
+                        font-size: 10px;
+    
+                    }
+                }
+            }
+        }
 
          .profile-details-navigation .navigation-section {
            
@@ -237,6 +253,7 @@
         }
 
         .profile-details-navigation{
+            padding: 10px 5px;
             .profile-header{ 
 
                 gap: 0px;
@@ -268,7 +285,9 @@
             }
         }
 
-
+.infomation p{
+    padding: 10px;
+}
        
     }
 }

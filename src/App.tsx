@@ -14,7 +14,7 @@ function App() {
   return (
    <BrowserRouter>
    <Navigation/>
-   <Sidebar/>
+   {/* <Sidebar/> */}
    {/* <Filter/>
    <Options/> */}
 
