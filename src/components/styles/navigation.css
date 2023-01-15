@@ -2,7 +2,10 @@ body {
   background-color: #E5E5E5;
 }
 
-.navigation-body, .input, .docs-section, .profile-section {
+.navigation-body,
+.input,
+.docs-section,
+.profile-section {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -14,7 +17,7 @@ body {
   right: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 2;
   margin: auto;
   padding: 10px 50px;
   background-color: #ffffff;
@@ -71,4 +74,82 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 425px) {
+  .navigation-container {
+    display: none;
+  }
+  .mobile-nav {
+    display: flex;
+  }
+  .mobile-nav .navigation-body {
+    gap: 10px;
+    padding: 10px;
+  }
+  .mobile-nav .logo-section {
+    width: 30%;
+  }
+  .mobile-nav .logo-section img {
+    width: 100%;
+  }
+  .mobile-nav .menu {
+    width: 10%;
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+  }
+  .mobile-nav .profile-section {
+    width: 60%;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-left: 10px;
+  }
+  .mobile-menu-content {
+    top: 70px;
+    right: 0px;
+    position: fixed;
+    z-index: 2;
+    background-color: #fefefe;
+    padding: 20px;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 1px #dcf6f6;
+  }
+  .mobile-menu-content input {
+    width: 100% !important;
+    padding: 15px;
+    border: 2px solid rgba(84, 95, 125, 0.15);
+    outline: none;
+    border-radius: 5px;
+    width: 70%;
+    padding: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .mobile-menu-content .icon {
+    background-color: #39CDCC;
+    color: #ffffff;
+    padding: 11.6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .mobile-menu-content .docs-section {
+    padding: 10px;
+    color: #213F7D;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  .mobile-menu-content .docs-section a {
+    color: #213F7D;
+  }
 }/*# sourceMappingURL=navigation.css.map */
