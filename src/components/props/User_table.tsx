@@ -4,38 +4,39 @@ import more from "../icons/more.png";
 import prev from "../icons/prev.png";
 import next from "../icons/next.png";
 import period from "../icons/period.png";
+import {BsFilter} from "react-icons/bs"
 
 export default function () {
     return (
         <div className="usertable-container">
 
-            <div className="users-table">
+            <div className="users-table table-container">
                 <table>
-                    <thead>
-                        <tr>
-                            <td className="organization">
-                                ORGANIZATION <span className="icon"> <img src={filter} alt="filter" /></span>
-                            </td>
-                            <td>
-                                USERNAME <span className="icon"> <img src={filter} alt="filter" /></span>
-                            </td>
-                            <td>
-                                EMAIL <span className="icon"> <img src={filter} alt="filter" /></span>
-                            </td>
+                    {/* <thead> */}
+                        <tr className="thead">
+                            <th className="organization">
+                                ORGANIZATION  <BsFilter/>
+                            </th>
+                            <th>
+                                USERNAME  <BsFilter/>
+                            </th>
+                            <th>
+                                EMAIL  <BsFilter/>
+                            </th>
 
-                            <td className="phone">
-                                PHONE NUMBER <span className="icon"> <img src={filter} alt="filter" /></span>
-                            </td>
+                            <th className="ph <BsFilter/>one">
+                                PHONE NUMBER  <BsFilter/>
+                            </th>
 
-                            <td className="date">
-                                DATE JOINED <span className="icon"> <img src={filter} alt="filter" /></span>
-                            </td>
+                            <th className="date">
+                                DATE JOINED  <BsFilter/>
+                            </th>
 
-                            <td className="status">
-                                STATUS <span className="icon"> <img src={filter} alt="filter" /></span>
-                            </td>
+                            <th className="status">
+                                STATUS  <BsFilter/>
+                            </th>
                         </tr>
-                    </thead>
+                    {/* </thead> */}
                     <tbody>
                         <tr>
 
@@ -79,7 +80,7 @@ export default function () {
                             </td>
 
                             <td>
-                                Adedeji
+                                Adedeji Chimbusoma roselinena
                             </td>
 
                             <td>
