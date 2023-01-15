@@ -73,6 +73,7 @@
         flex-direction: column;
         .card{
             width: 100%;
+           
             align-items: center;
         }
     }
@@ -80,3 +81,25 @@
 }
 }
 
+
+@media(max-width:"1111px"){
+    .cards-body{
+        padding: 10px;
+        justify-content: center;
+        .card{
+            height: 180px;
+            // width: 40%;
+        }
+    }
+}
+
+@media(max-width:"670px"){
+    .cards-body{
+        padding: 10px;
+        justify-content: center;
+        .card{
+            // height: 180px;
+            width: 40%;
+        }
+    }
+}
