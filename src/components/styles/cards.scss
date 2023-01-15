@@ -60,5 +60,23 @@
     }
 }
 
+@media(max-width:"425px"){
+    .cards-container {
+        position: absolute;
+        top: 130px;
+        // left: 25%;
+        left: 0;
+        right: 0;
+        width: 80%;
+        margin: auto;  
+    .cards-body{
+        flex-direction: column;
+        .card{
+            width: 100%;
+            align-items: center;
+        }
+    }
 
+}
+}
 
