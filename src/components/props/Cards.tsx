@@ -3,6 +3,8 @@ import d_users from "../icons/d_users.png";
 import active_users from "../icons/active_users.png";
 import loaned_users from "../icons/loaned_users.png";
 import saving_users from "../icons/saving_users.png";
+import User_table from "./User_table";
+import User_details from "../pages/User_details";
 
 export default function Cards() {
     return (
@@ -73,6 +75,8 @@ export default function Cards() {
                 </div>
 
             </div>
+
+            <User_table/> 
 
 
          
