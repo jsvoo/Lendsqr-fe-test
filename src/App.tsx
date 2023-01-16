@@ -9,17 +9,18 @@ import Cards from './components/props/Cards';
 import User_table from './components/props/User_table';
 import Filter from './components/props/Filter';
 import Options from './components/props/Options';
+import LandingPage from './components/pages/LandingPage';
 
 function App() {
   return (
    <BrowserRouter>
-   <Navigation/>
+   {/* <Navigation/> */}
    {/* <Sidebar/> */}
    {/* <Filter/>
    <Options/> */}
 
    <Routes>
-    <Route element={<Login/>} path="/" />
+    <Route element={<LandingPage/>} path="/" />
     <Route element={< Cards />} path="cards" />
     <Route element={<User_table/>} path="table" />
     <Route element={<User_details />} path="details" />

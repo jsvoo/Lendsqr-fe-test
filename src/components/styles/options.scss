@@ -5,9 +5,9 @@
 
     padding: 10px;
     box-shadow: 0px 0px 5px 1px grey;
-    position: absolute;
-    top: 47.8%;
-    left: 85%;
+    position:absolute;
+    // top: 33%;
+    left: 75%;
     border-radius: 4px;
     width: 200px;
     background-color: $light;
@@ -20,8 +20,19 @@
         gap: 10px;
 
         img{
-            @include flex-center-center
+            @include flex-center-center;
+        }
+        .text{
+            cursor: pointer; 
+
         }
 
+    }
+}
+
+@media(max-width:"425px"){
+    .options-container{
+        left: 1px;
+        top: 70%; 
     }
 }
