@@ -25,7 +25,6 @@ yarn-error.log*
 
 # SASS 
 *.map
-*.css
-.css*
+
 
 #images  

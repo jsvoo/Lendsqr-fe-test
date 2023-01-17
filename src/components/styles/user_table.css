@@ -1,0 +1,210 @@
+.cards-container {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 75%;
+  margin: auto;
+}
+.cards-container .header {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 30px 0px;
+  color: #213F7D;
+}
+
+.cards-body {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.cards-body .card {
+  background-color: #ffffff;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 23%;
+  height: 150px;
+  padding: 20px;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #545F7D;
+}
+.cards-body .card .number {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #213F7D;
+}
+
+@media (max-width: 425px) {
+  .cards-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 80%;
+    margin: auto;
+  }
+  .cards-container .cards-body {
+    flex-direction: column;
+  }
+  .cards-container .cards-body .card {
+    width: 100%;
+    align-items: center;
+  }
+}
+@media (max-width: 1111px) {
+  .cards-body {
+    padding: 0px;
+  }
+  .cards-body .card {
+    height: 180px;
+  }
+}
+@media (max-width: 670px) {
+  .cards-body {
+    padding: 0px;
+    justify-content: flex-start;
+  }
+  .cards-body .card {
+    width: 45%;
+  }
+}
+.usertable-container {
+  top: 95%;
+  left: 0;
+  right: 0;
+  width: 98%;
+  overflow-x: scroll;
+}
+
+.users-table {
+  margin: 50px 0px 20px 0px;
+  background-color: #ffffff;
+  background: #FFFFFF;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  color: #545F7D;
+  overflow-x: scroll;
+  z-index: 10;
+  box-shadow: 0px 0px 5px 1px grey;
+  padding: 35px;
+}
+.users-table table {
+  font-family: "Work Sans";
+  font-style: normal;
+  border-collapse: collapse;
+  width: 1300px;
+  margin: auto;
+  text-align: left;
+}
+.users-table table thead td {
+  font-weight: 600;
+  padding: 15px;
+  font-size: 12px;
+}
+.users-table table tbody {
+  font-weight: 100;
+}
+.users-table table tbody tr {
+  border-bottom: 1px solid #545F7D;
+}
+.users-table table tbody tr td {
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 100;
+  width: 30px;
+  justify-items: start;
+  overflow-wrap: break-word;
+}
+.users-table table tbody tr:last-child {
+  border-bottom: none;
+}
+.users-table table tbody .active, .users-table table tbody .inactive, .users-table table tbody .blacklisted, .users-table table tbody .pending {
+  background-color: #dcf6e3;
+  color: #39CD62;
+  padding: 6px 15px;
+  border-radius: 100px;
+}
+.users-table table tbody .pending {
+  background-color: #fff4d0;
+  color: #E9B200;
+}
+.users-table table tbody .blacklisted {
+  background-color: #ffe7ed;
+  color: #E4033B;
+}
+.users-table table tbody .inactive {
+  background-color: #e3e6ed;
+  color: #545F7D;
+}
+
+.table-footer, .table-footer .page-navigation, .table-footer .showing-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+  color: #213F7D;
+}
+.table-footer .page-navigation, .table-footer .showing-section {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.table-footer .showing-section {
+  justify-content: flex-start;
+  gap: 20px;
+  margin: 0px 20px;
+  width: 70%;
+}
+.table-footer .showing-section select {
+  padding: 5px 8px;
+  background-color: #E5E8EE;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px 0px grey;
+  margin: 0px 10px;
+}
+.table-footer .page-navigation {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+.table-footer .page-navigation .icon img {
+  width: 18px;
+}
+
+@media (max-width: 670px) {
+  .users-table table tbody tr td {
+    padding: 5px 10px;
+  }
+  .table-footer, .table-footer .page-navigation, .table-footer .showing-section {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 0px;
+    color: #213F7D;
+  }
+  .table-footer .showing-section {
+    justify-content: flex-start;
+    gap: 0px;
+    margin: 0px 20px;
+    width: 100%;
+  }
+  .table-footer, .table-footer .page-navigation, .table-footer .showing-section {
+    flex-wrap: wrap;
+  }
+  .table-footer .page-navigation {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}/*# sourceMappingURL=user_table.css.map */

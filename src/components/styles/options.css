@@ -1,0 +1,33 @@
+.options-container {
+  color: #213F7D;
+  padding: 10px;
+  box-shadow: 0px 0px 5px 1px grey;
+  position: absolute;
+  left: 75%;
+  border-radius: 4px;
+  width: 200px;
+  background-color: #ffffff;
+  z-index: 1;
+  font-size: 14px;
+}
+.options-container .option {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+.options-container .option img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.options-container .option .text {
+  cursor: pointer;
+}
+
+@media (max-width: 425px) {
+  .options-container {
+    left: 1px;
+    top: 70%;
+  }
+}/*# sourceMappingURL=options.css.map */

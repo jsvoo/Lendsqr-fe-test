@@ -1,0 +1,77 @@
+.filter-container {
+  padding: 10px;
+  box-shadow: 0px 0px 5px 1px grey;
+  position: absolute;
+  top: 5%;
+  left: 0;
+  left: 15px;
+  border-radius: 4px;
+  width: 260px;
+  background-color: #ffffff;
+  z-index: 1;
+  font-size: 14px;
+}
+.filter-container .parameter-section {
+  font-family: "Work Sans";
+  font-style: normal;
+  color: #545F7D;
+  margin: 25px 0px;
+}
+.filter-container .parameter-section input,
+.filter-container .parameter-section select {
+  width: 90%;
+  padding: 15px;
+  border: 2px solid rgba(84, 95, 125, 0.15);
+  outline: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 9px;
+  color: #545F7D;
+}
+.filter-container .parameter-section .date-label {
+  width: 700px !important;
+  height: 20px;
+  background-color: red;
+}
+.filter-container .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin: 15px 0px;
+}
+.filter-container .buttons button:first-child {
+  padding: 10px 30px;
+  color: #213F7D;
+  border-radius: 7px;
+  border: 2px solid #545F7D;
+  background-color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.filter-container .buttons button:last-child {
+  padding: 10px 30px;
+  color: #ffffff;
+  border-radius: 7px;
+  border: none;
+  background-color: #39CDCC;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 1110px) {
+  .filter-container {
+    top: 5.7%;
+  }
+}
+@media (max-width: 671px) {
+  .filter-container {
+    top: 10.7%;
+  }
+}
+@media (max-width: 428px) {
+  .filter-container {
+    top: 16.3%;
+    width: 200px;
+  }
+}/*# sourceMappingURL=filter.css.map */
