@@ -12,8 +12,6 @@ export default function Login() {
     const [emptyField, setEmptyField] = useState<boolean>(false)
 
  
-    
-
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target
         setInput((prev) => {
@@ -21,6 +19,32 @@ export default function Login() {
         })
 
     }
+
+    useEffect(() => {
+        handleGetUsers()
+    }, [])
+
+
+    const handleFieldValidation = () => {
+        if (input.email === "" || input.email === null || input.password === "" || input.password === null) {
+            setEmptyField(true)
+        } else {
+            //handleLogin()
+        }
+    }
+
+  
+    const handleGetUsers = async () => {
+
+        try {
+            const data = await (await axios.get(url)).data
+            setUsers(data)
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
+
 
     return (
         <div className="login_container">
