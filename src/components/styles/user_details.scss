@@ -1,0 +1,293 @@
+@import "cards.scss";
+@import "_variables";
+.table-container{
+    overflow-x: scroll
+}
+.userdetails-container {
+    @extend .cards-container;
+    width: 70%;
+    top: 90px;
+    font-family: "Work Sans"; 
+
+
+
+    .header-section {
+        margin: 20px 0px;
+        padding: 5px;
+
+        .back-to-users {
+            @include flex-align-center;
+            gap: 20px;
+
+            .back-image {
+                @include flex-align-center;
+                cursor: pointer;
+
+            }
+
+            .back-text {
+                color: #545F7D;
+                font-size: map-get($map: $font-sizes, $key: "normal");
+                cursor: pointer;
+            }
+        }
+
+        .details-buttons-section {
+            @include flex-align-center;
+            @include justify-between;
+
+
+            .user-details-header-text {
+                color: #213F7D;
+            }
+
+            .buttons {
+                @include flex-align-center;
+                gap: 20px;
+
+                button:first-child {
+                    @include button(1px solid #E4033B, $light, #E4033B);
+                    font-weight: 500;
+                    font-family: "Work Sans";
+                    font-size: 14px;
+                    letter-spacing: 0.1em;
+                }
+
+                button:last-child {
+                    @include button(1px solid $primary, $light, $primary);
+                    font-weight: 500;
+                    font-family: "Work Sans";
+                    font-size: 14px;
+                    letter-spacing: 0.1em;
+                }
+            }
+        }
+    }
+
+   
+.profile-details-navigation{ 
+    background-color: $light;
+
+    .profile-header {
+        @include flex-align-center;
+        gap: 30px;
+        padding: 20px;
+
+        .avatar-name-section {
+            width: 30%;
+            @include flex-align-center;
+            gap: 20px;
+            border-right: 1px solid grey;
+            height: 60px;
+        
+
+            .name {
+                color: #213F7D;
+                font-size: 22px;
+
+            }
+            p {
+                color: #545F7D;
+                font-size: 12px;
+                margin-top: 5px;
+            }
+
+            .avatar-section {
+                width: 60px;
+
+                img {
+                    width: 100%;
+                    @include flex-align-center
+                }
+            }
+
+        }
+
+        .tier-section {
+            width: 20%;
+            height: 60px;
+            @include flex-center-center;
+            flex-direction: column;
+            color: #545F7D;
+            font-size: 14px;
+
+            .tier-icon{
+                margin-top: 5px;
+            }
+
+        }
+
+        .amount-section {
+            width: 40%;
+            border-left: 1px solid grey;
+            height: 60px;
+            padding-left: 20px;
+            @include flex;
+            @include justify-center;
+            flex-direction: column;
+
+            .amount {
+                color: #213F7D;
+                font-size: 22px;
+            }
+
+            .account-details {
+                color: lighten(#213F7D, 30%);
+                font-size: 12px;
+                margin-top: 5px;
+                font-weight: 400;
+            }
+
+        }
+    }
+
+    .navigation-section{
+        @include flex-align-center;
+        @include justify-between;
+        padding: 40px 40px 0px 40px;
+        span{
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 13px; 
+            font-weight: 300;
+            &:first-child{border-bottom: 2px solid $primary; color: $primary;}
+        }
+
+    }
+}
+
+.userdetails-body{
+    padding: 20px 40px;
+    margin-top: 30px; 
+    background-color: $light;
+    
+    .infomation{
+        margin: 30px 0px; 
+        box-shadow: 0 2px 2px -2px gray;
+
+    }
+    table{ 
+        padding-bottom: 20px;  
+        thead{  
+            color: #545F7D; 
+            font-size: 12px;
+            font-weight: 300;
+            text-transform: uppercase;
+
+            td{
+                padding-top: 25px;
+
+            }
+        }
+        td{  
+            width: 24%; 
+        }
+        tbody{
+            color: #545F7D;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 19px;
+            font-size: 14px; 
+        }
+    }
+
+    // .guarantor{
+    //     td{
+    //     width: 33%; 
+    //    }
+    // }
+    //  .socials{
+    //     td{
+    //     width: 45%; 
+    //    }
+    // }
+}
+
+
+.hide{
+    color: white;
+}
+
+}
+
+@media(max-width:430px){
+    .userdetails-container .userdetails-body {
+        padding: 0px;
+        width: 100%;
+    }
+
+    .userdetails-container {
+        width: 90%;
+        margin: auto; 
+        left: 0; 
+
+        .header-section {
+            .details-buttons-section { 
+                flex-direction: column-reverse;
+                // margin: 10px 0px;
+                gap: 20px;
+               
+                .buttons{
+                    button:first-child,button:last-child{
+                        padding: 10px ;
+                        font-size: 10px;
+    
+                    }
+                }
+            }
+        }
+
+         .profile-details-navigation .navigation-section {
+           
+            justify-content:center;
+            gap: 15px;
+            
+            padding: 40px 0px 0px 0px;
+            margin: auto;
+            width: 90%;
+
+            flex-wrap: wrap;
+            width: 100% ;
+
+          
+        }
+
+        .profile-details-navigation{
+            padding: 10px 5px;
+            .profile-header{ 
+
+                gap: 0px;
+                padding: 0px;
+                flex-direction: column;
+               
+                .amount-section, .tier-section, .avatar-name-section{
+                    width: 80%;
+                    gap: 0; 
+                   
+                }
+                .avatar-name-section{
+                    width: 90%;
+                    gap: 15px;
+                }
+               }
+        }
+
+        table{
+            thead td {
+                font-size: 8px;
+                padding: 10px 10px;
+            }
+            tbody td {
+                padding: 0px 15px;
+                font-size: 10px;
+                line-height: 0.4cm;
+                vertical-align: top;
+            }
+        }
+
+.infomation p{
+    padding: 10px;
+}
+       
+    }
+}
