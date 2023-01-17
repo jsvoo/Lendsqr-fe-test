@@ -69,7 +69,7 @@ export default function Login() {
             <div className="body">
                 <div className="banner-section">
                     <div className="logo-section">
-                        <img src={logo} alt="Lendsqr image" />
+                        <img src={logo} alt="Lendsqr logo" />
 
                     </div>
                     <div className="banner">
@@ -90,7 +90,7 @@ export default function Login() {
                             <div className="email-section input-container ">
                                 <input type="text"
                                     className={!emptyField && input.email === "" ? "" : "error"}
-                                    placeholder={!emptyField && input.email === "" ? "Email" : ("Required field")}
+                                    placeholder={!emptyField && input.email === "" ? "Email" : ("Email field is required field")}
                                     name="email"
                                     onChange={(event) => { handleChange(event); setEmptyField(false) }}
                                     value={input.email}
@@ -103,7 +103,7 @@ export default function Login() {
                                     onChange={(event) => handleChange(event)}
                                     value={input.password}
                                     className={!emptyField && input.password === "" ? "" : "error"}
-                                    placeholder={!emptyField && input.password === "" ? "Password" : ("Required field")}
+                                    placeholder={!emptyField && input.password === "" ? "Password" : ("Password filed is required field")}
                                 />
                                 <span className="show">SHOW</span>
                             </div>

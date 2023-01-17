@@ -63,7 +63,7 @@ export default function UserDetails() {
                             <div className="avatar-name-section">
 
                                 <div className="avatar-section">
-                                    <img src={avatar} alt="user_avatar" />
+                                    <img src={avatar} alt="user avatar" />
                                 </div>
 
                                 <div className="name-section">
