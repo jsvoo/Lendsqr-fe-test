@@ -1,14 +1,11 @@
-import "../styles/user_table.css";
-import filter from "../icons/filter.png";
+import "../styles/user_table.css"; 
 import more from "../icons/more.png";
 import prev from "../icons/prev.png";
 import next from "../icons/next.png";
 import period from "../icons/period.png";
-import { BsFilter } from "react-icons/bs"
-import Cards from "./Cards";
+import { BsFilter } from "react-icons/bs" 
 import Filter from "./Filter";
-import { useContext, useState, useEffect } from "react";
-import { LendsqrUserContextManager } from "../../context/LendsqrUserContext";
+import {  useState, useEffect } from "react"; 
 import "../styles/options.css"
 import activate from "../icons/activate.png"
 import view from "../icons/view.png"
@@ -47,15 +44,8 @@ export const url = "https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/u
 export default function () {
     const [initial, setInitial] = useState<{ filter: boolean, options: boolean }>({ filter: false, options: false })
     const [clicked, setClicked] = useState({ ...initial })
-    const [optionId, setOptionId] = useState<string>("")
-    // const{clicked, setClicked} = useContext(LendsqrUserContextManager)
-    // console.log(clicked)
-    type Profile = {
-        [key: string]: string
-    }
-    // type User = {
-    //     [key:string]:Profile  
-    // }
+    const [optionId, setOptionId] = useState<string>("") 
+   
 
 
     const [users, setUsers] = useState<User[] | null>([])

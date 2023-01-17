@@ -1,18 +1,10 @@
 import Navigation from "../Navigation";
-import Sidebar from "../Sidebar";
-import User_details from "./User_details";
-import User_table from "../props/User_table";
+import Sidebar from "../Sidebar"; 
 import Cards from "../props/Cards";
-import { useState, useContext, useEffect } from "react";
-import { LendsqrUserContextManager } from "../../context/LendsqrUserContext";
+import {useEffect } from "react"; 
 import { useNavigate } from "react-router-dom";
 
-export default function(){
-    // const [clicked, setClicked] = useState<{userDetails:boolean}>({userDetails:false})
-    const {clicked} = useContext(LendsqrUserContextManager)  
-//  console.log({...clicked, filter})
-console.log(clicked)
-// setClicked()
+export default function(){ 
 
 const navigate = useNavigate()
 
@@ -26,8 +18,7 @@ useEffect(() => {
         <div className="landing-page-container"> 
             <Navigation/>
             <Sidebar/> 
-            <Cards/> 
-            {/* <User_details /> */}
+            <Cards/>  
         </div>
     )
 }

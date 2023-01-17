@@ -46,8 +46,7 @@ export default function Login() {
     const handleLogin = () => {
 
         for (const user of users) {
-            if (user.email.toLowerCase() === input.email.toLowerCase()) {
-                console.log(user)
+            if (user.email.toLowerCase() === input.email.toLowerCase()) { 
                 if (user.profile.bvn === input.password) {
                     setInput({ ...input, error: " " })
                     localStorage.setItem("user", JSON.stringify(user))
