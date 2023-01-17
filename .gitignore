@@ -28,7 +28,4 @@ yarn-error.log*
 *.css
 .css*
 
-#images 
-/src/components/images/
- 
-/src/components/icons/
+#images  
