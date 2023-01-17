@@ -4,7 +4,11 @@
 
 .usertable-container{
 
-    @extend .cards-container;
+    // @extend .cards-container;
+    top: 95%;
+    left:0;
+    right:0;
+    width: 98%;
 }
 
 .users-table {
@@ -132,6 +136,37 @@
             img{
                 width: map-get($map: $font-sizes, $key:"big" );
             }
+        }
+    }
+}
+
+
+@media(max-width:"670px"){
+
+    .users-table table tbody tr td {
+        padding: 5px 10px; 
+    }
+
+    .table-footer, .table-footer .page-navigation, .table-footer .showing-section {
+        display: flex;
+         justify-content: flex-start; 
+         margin: 10px 0px; 
+        color: #213F7D;
+    }
+
+    .table-footer .showing-section {
+        justify-content: flex-start;
+        gap: 0px;
+        margin: 0px 20px;
+        width: 100%;
+    }
+
+
+    .table-footer  { 
+        flex-wrap: wrap;
+        .page-navigation{
+            width: 100%;
+            justify-content: space-evenly;  
         }
     }
 }

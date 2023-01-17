@@ -6,8 +6,8 @@
     padding: 10px;
     box-shadow: 0px 0px 5px 1px grey;
     position: absolute;
-    top: 43%;
-    left: 23.8%;
+    top: 33%;
+    left:15px;
     border-radius: 4px;
     width: 260px;
     background-color: $light;
@@ -64,5 +64,25 @@
          button:last-child {
             @include button(none, $primary, $light, )
         }
+    }
+}
+
+
+@media(max-width:"1110px"){
+    .filter-container { 
+        top: 37%; 
+    }
+}
+
+@media(max-width:"671px"){
+    .filter-container { 
+        top: 54%; 
+    }
+}
+@media(max-width:"425px"){
+    .filter-container { 
+        top:66%;
+        width: 200px;
+        left: 8px;  
     }
 }
