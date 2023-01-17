@@ -5,8 +5,29 @@ import loaned_users from "../icons/loaned_users.png";
 import saving_users from "../icons/saving_users.png";
 import User_table from "./User_table";
 import User_details from "../pages/User_details";
+import axios from "axios"
+import { useEffect, useState } from "react"; 
 
 export default function Cards() {
+    const [users, setUsers] = useState<object[]>([])
+
+ 
+    useEffect(()=>{
+        handleGetUsers()
+    },[])
+
+    const handleGetUsers = async () => {
+        const url ="https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users"
+        try {
+            const data = await (await axios.get(url)).data
+            setUsers(data)
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
+
+
     return (
         <div className="cards-container">
             <p className="header">Users</p>
@@ -21,7 +42,7 @@ export default function Cards() {
 
                     </div>
                     <div className="number">
-                        <p>2,453</p>
+                        <p>{users.length}</p>
 
                     </div>
                 </div>
@@ -38,7 +59,7 @@ export default function Cards() {
 
                     </div>
                     <div className="number">
-                        <p>2,453</p>
+                        <p>{users.length}</p>
 
                     </div>
                 </div>
@@ -53,7 +74,7 @@ export default function Cards() {
 
                     </div>
                     <div className="number">
-                        <p>12,453</p>
+                        <p>{users.length}</p>
 
                     </div>
                 </div>
@@ -69,17 +90,17 @@ export default function Cards() {
 
                     </div>
                     <div className="number">
-                        <p>102,453</p>
+                        <p>{users.length}</p>
 
                     </div>
                 </div>
 
             </div>
 
-            <User_table/> 
+            <User_table />
 
 
-         
+
 
 
 

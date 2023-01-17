@@ -2,21 +2,45 @@ import "../styles/user_details.css";
 import back_img from "../icons/back_img.png";
 import avatar from "../icons/avatar.png";
 import tier from "../icons/tier.png";
+import { Link, useParams } from "react-router-dom";
+import { useEffect, useState } from "react"
+import { url, User } from "../props/User_table";
+import axios from "axios"
 
 export default function User_details() {
+
+    const [user, setUser] = useState<User>()
+    const { id } = useParams()
+    const [incomeRange, setIncomeRange] = useState<{ lower: number, higher: number }>({ lower: 0, higher: 0 })
+
+
+
+    useEffect(() => {
+        axios.get(`${url}/${id}`).then((response) => {
+            const data = response.data
+            setUser(data)
+
+            if (+data.education.monthlyIncome[0] < +data.education.monthlyIncome[1]) {
+                setIncomeRange({ ...incomeRange, lower: +data.education.monthlyIncome[0], higher: +data.education.monthlyIncome[1] })
+            } else {
+                setIncomeRange({ ...incomeRange, lower: +data.education.monthlyIncome[1], higher: +data.education.monthlyIncome[0] })
+            }
+
+        })
+    }, [])
 
     return (
         <div className="userdetails-container">
 
             <div className="header-section">
                 <div className="back-to-users">
-                    <div className="back-image">
+                    <Link to={"/"} className="back-image">
                         <img src={back_img} alt="Back" />
-                    </div>
-                    <div className="back-text">
+                    </Link>
+                    <Link to={"/"} className="back-text">
                         Back to Users
 
-                    </div>
+                    </Link>
 
                 </div>
                 <div className="details-buttons-section">
@@ -30,216 +54,220 @@ export default function User_details() {
                 </div>
             </div>
 
+            {
+                user ? (
 
-            <div className="profile-details-navigation">
+                    <div className="profile-details-navigation">
 
-                <div className="profile-header">
-                    <div className="avatar-name-section">
+                        <div className="profile-header">
+                            <div className="avatar-name-section">
 
-                        <div className="avatar-section">
-                            <img src={avatar} alt="user_avatar" />
-                        </div>
+                                <div className="avatar-section">
+                                    <img src={avatar} alt="user_avatar" />
+                                </div>
 
-                        <div className="name-section">
-                            <div className="name">
-                                Grace Effiom
+                                <div className="name-section">
+                                    <div className="name">
+                                        {user.profile.firstName}
+                                    </div>
+                                    <p>{user.accountNumber}</p>
+                                </div>
+
                             </div>
-                            <p>LSQFf587g90</p>
+
+                            <div className="tier-section">
+                                <div className="tier-text">
+                                    User's Tier
+                                </div>
+                                <div className="tier-icon">
+                                    <img src={tier} alt="Tier-1" />
+                                </div>
+
+                            </div>
+                            <div className="amount-section">
+                                <div className="amount">
+                                    ₦{user.accountBalance}
+                                </div>
+
+                                <div className="account-details">
+                                    9912345678/Providus Bank
+                                </div>
+
+                            </div>
                         </div>
 
-                    </div>
-
-                    <div className="tier-section">
-                        <div className="tier-text">
-                            User's Tier
-                        </div>
-                        <div className="tier-icon">
-                            <img src={tier} alt="Tier-1" />
-                        </div>
-
-                    </div>
-                    <div className="amount-section">
-                        <div className="amount">
-                            ₦200,000.00
-                        </div>
-
-                        <div className="account-details">
-                            9912345678/Providus Bank
-                        </div>
-
-                    </div>
-                </div>
-
-                <div className="navigation-section">
-                    <span>General Details</span>
-                    <span>Documents</span>
-                    <span> Bank Details</span>
-                    <span> Loans</span>
-                    <span> Savings</span>
-                    <span> App and System</span>
-                </div>
-
-
-            </div>
-
-            <div className="userdetails-body">
-
-                <div className="personal-information-section">
-
-                    <div className="personal infomation">
-                        <p>Personal information</p>
-
-                        <div className="table-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>FULL NAME</td>
-                                    <td>PHONE NUMBER</td>
-                                    <td> EMAIL ADDRESS</td>
-                                    <td>BVN</td>
-                                    <td>GENDER</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Grace Effiom</td>
-                                    <td>07060780922</td>
-                                    <td>grace@gmail.com</td>
-                                    <td>07060780922</td>
-                                    <td>Female</td>
-                                </tr>
-                            </tbody>
-
-                            <thead className="thead">
-                                <tr>
-                                    <td>MARITAL STATUS</td>
-                                    <td>CHILDREN</td>
-                                    <td> TYPE OF RESIDENCE</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Single</td>
-                                    <td>None</td>
-                                    <td>Parent's Apartment</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div className="navigation-section">
+                            <span>General Details</span>
+                            <span>Documents</span>
+                            <span> Bank Details</span>
+                            <span> Loans</span>
+                            <span> Savings</span>
+                            <span> App and System</span>
                         </div>
 
 
                     </div>
+                ) : <p>Loading unser information, please wait...</p>
+            }
 
-                    <div className="education infomation">
-                        <p>Education and Employment</p>
+            {
+                user ? (
+                    <div className="userdetails-body">
 
-                       <div className="table-container">
-                       <table>
-                            <thead>
-                                <tr>
-                                    <td>LEVEL OF EDUCATION</td>
-                                    <td>EMPLOYMENT STATUS</td>
-                                    <td> EMPLOYMENT SECTOR</td>
-                                    <td>DURATION OF EMPLOYMENT</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>B.Sc</td>
-                                    <td>Employed</td>
-                                    <td>FinTech</td>
-                                    <td>2 years</td>
-                                </tr>
-                            </tbody>
+                        <div className="personal-information-section">
 
-                            <thead className="thead">
-                                <tr>
-                                    <td> OFFICE EMAIL</td>
-                                    <td>MONTHLY INCOME</td>
-                                    <td> LOAN REPAYMENT</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>grace@lendsqr.com</td>
-                                    <td > ₦200,000.00 -  ₦400,000.00</td>
-                                    <td>₦40,000</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                            <div className="personal infomation">
+                                <p>Personal information</p>
 
-                       </div>
+                                <div className="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td>FULL NAME</td>
+                                                <td>PHONE NUMBER</td>
+                                                <td> EMAIL ADDRESS</td>
+                                                <td>BVN</td>
+                                                <td>GENDER</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>{user.profile.firstName} {user.profile.lastName}</td>
+                                                <td>{user.phoneNumber.split('x')[0]}</td>
+                                                <td>{user.email}</td>
+                                                <td>{user.profile.bvn}</td>
+                                                <td>{user.profile.gender}</td>
+                                            </tr>
+                                        </tbody>
 
-                    </div>
+                                        <thead className="thead">
+                                            <tr>
+                                                <td>MARITAL STATUS</td>
+                                                <td>CHILDREN</td>
+                                                <td> TYPE OF RESIDENCE</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>UNKNOWN</td>
+                                                <td>UNKNOWN</td>
+                                                <td>UNKNOWN</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
 
-                    <div className="socials infomation">
-                        <p>Socials</p>
-                        <div className="table-container">
 
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <td>TWITTER</td>
-                                        <td>FACEBOOK</td>
-                                        <td> INSTAGRAM</td>
-                                        {/* <td className="hide"> INSTAGRAM</td> 
-                                    <td className="hide"> INSTAGRAM</td>  */}
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>@grace_effiom</td>
-                                        <td>@grace_effiom</td>
-                                        <td>@grace_effiom</td>
-                                        {/* <td className="hide">@grace_effiom</td> 
-                                    <td className="hide">@grace_effiom</td>  */}
-                                    </tr>
-                                </tbody>
-                            </table>
+                            </div>
+
+                            <div className="education infomation">
+                                <p>Education and Employment</p>
+
+                                <div className="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td>LEVEL OF EDUCATION</td>
+                                                <td>EMPLOYMENT STATUS</td>
+                                                <td> EMPLOYMENT SECTOR</td>
+                                                <td>DURATION OF EMPLOYMENT</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>{user.education.level}</td>
+                                                <td>{user.education.employmentStatus}</td>
+                                                <td>{user.education.sector}</td>
+                                                <td>{user.education.duration}</td>
+                                            </tr>
+                                        </tbody>
+
+                                        <thead className="thead">
+                                            <tr>
+                                                <td> OFFICE EMAIL</td>
+                                                <td>MONTHLY INCOME</td>
+                                                <td> LOAN REPAYMENT</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>{user.education.officeEmail}</td>
+                                                <td > ₦{incomeRange.lower}-{incomeRange.higher}</td>
+                                                <td>₦{user.education.loanRepayment}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                            </div>
+
+                            <div className="socials infomation">
+                                <p>Socials</p>
+                                <div className="table-container">
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td>TWITTER</td>
+                                                <td>FACEBOOK</td>
+                                                <td> INSTAGRAM</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>{user.socials.twitter}</td>
+                                                <td>{user.socials.facebook}</td>
+                                                <td> {user.socials.instagram}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                            </div>
+
+                            <div className="guarantor infomation">
+                                <p>Guarantor</p>
+
+                                <div className="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td>FULL NAME</td>
+                                                <td> PHONE NUMBER</td>
+                                                <td>EMAIL ADDRESS</td>
+                                                <td>RELATIONSHIP</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>{`${user.guarantor.firstName} ${user.guarantor.lastName}`} </td>
+                                                <td>{user.guarantor.phoneNumber.split("x")[0]}</td>
+                                                <td>UNKNOWN</td>
+                                                <td>UNKNOWN</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                            </div>
+
+
+
                         </div>
 
 
-                    </div>
 
-                    <div className="guarantor infomation">
-                        <p>Guarantor</p>
 
-                        <div className="table-container">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <td>FULL NAME</td>
-                                        <td> PHONE NUMBER</td>
-                                        <td>EMAIL ADDRESS</td>
-                                        <td>RELATIONSHIP</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Debby Ogana</td>
-                                        <td>07060780922</td>
-                                        <td>debby@gmail.com</td>
-                                        <td>Sister</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+
+
 
 
                     </div>
-
-
-
-                </div>
-
-
-
-
-
-
-
-
-            </div>
+                ) : null
+            }
 
 
 
