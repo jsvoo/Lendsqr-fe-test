@@ -10,8 +10,8 @@ export default function Login() {
     const [user, setUser] = useState<User | null>(null)
     const [input, setInput] = useState<{ email: string, password: string, error: string }>({ email: "", password: "", error: "" })
     const [emptyField, setEmptyField] = useState<boolean>(false)
+    const navigate = useNavigate()
 
- 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target
         setInput((prev) => {
@@ -24,16 +24,6 @@ export default function Login() {
         handleGetUsers()
     }, [])
 
-
-    const handleFieldValidation = () => {
-        if (input.email === "" || input.email === null || input.password === "" || input.password === null) {
-            setEmptyField(true)
-        } else {
-            //handleLogin()
-        }
-    }
-
-  
     const handleGetUsers = async () => {
 
         try {
@@ -41,6 +31,34 @@ export default function Login() {
             setUsers(data)
         } catch (error) {
             console.log(error)
+        }
+
+    }
+    const handleFieldValidation = () => {
+        if (input.email === "" || input.email === null || input.password === "" || input.password === null) {
+            setEmptyField(true)
+        } else {
+            handleLogin()
+        }
+    }
+
+
+    const handleLogin = () => {
+
+        for (const user of users) {
+            if (user.email.toLowerCase() === input.email.toLowerCase()) {
+                console.log(user)
+                if (user.profile.bvn === input.password) {
+                    setInput({ ...input, error: " " })
+                    localStorage.setItem("user", JSON.stringify(user))
+                    navigate("/")
+                } else {
+                    setInput({ ...input, error: "Invalid password. Please use your BVN as password" })
+                }
+                break;
+            } else {
+                setInput({ ...input, error: "Account not found. Please log in with a registered email or signup to continue" })
+            }
         }
 
     }
@@ -86,7 +104,7 @@ export default function Login() {
                                     name="password"
                                     onChange={(event) => handleChange(event)}
                                     value={input.password}
-                                    className={!emptyField && input.password === ""  ? "" : "error"}
+                                    className={!emptyField && input.password === "" ? "" : "error"}
                                     placeholder={!emptyField && input.password === "" ? "Password" : ("Required field")}
                                 />
                                 <span className="show">SHOW</span>
@@ -98,7 +116,7 @@ export default function Login() {
                                 FORGOT PASSWORD
                             </p>
                             <button type="button"
-                                
+                                onClick={() => handleFieldValidation()}
                             >LOG IN</button>
                         </form>
                     </div>
