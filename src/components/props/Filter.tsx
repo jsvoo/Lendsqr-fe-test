@@ -1,5 +1,4 @@
-import "../styles/filter.css";
-import date from "../icons/date.png";
+import "../styles/filter.css"; 
 
 export default function () {
     return (

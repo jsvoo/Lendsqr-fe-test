@@ -1,14 +1,11 @@
-import "../styles/user_table.css";
-import filter from "../icons/filter.png";
+import "../styles/user_table.css"; 
 import more from "../icons/more.png";
 import prev from "../icons/prev.png";
 import next from "../icons/next.png";
 import period from "../icons/period.png";
-import { BsFilter } from "react-icons/bs"
-import Cards from "./Cards";
-import Filter from "./Filter"; 
-import { useContext, useState, useEffect } from "react";
-import { LendsqrUserContextManager } from "../../context/LendsqrUserContext";
+import { BsFilter } from "react-icons/bs" 
+import Filter from "./Filter";
+import {  useState, useEffect } from "react"; 
 import "../styles/options.css"
 import activate from "../icons/activate.png"
 import view from "../icons/view.png"
@@ -41,22 +38,15 @@ export type User = {
     "monthlyIncome": [
         "384.23",
         "108.69"
-        ]
+    ]
 }
 export const url = "https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users"
 export default function () {
     const [initial, setInitial] = useState<{ filter: boolean, options: boolean }>({ filter: false, options: false })
     const [clicked, setClicked] = useState({ ...initial })
-    const [optionId, setOptionId] = useState<string>("")
-    // const{clicked, setClicked} = useContext(LendsqrUserContextManager)
-    // console.log(clicked)
-    type Profile = {
-        [key: string]: string
-    }
-    // type User = {
-    //     [key:string]:Profile  
-    // }
- 
+    const [optionId, setOptionId] = useState<string>("") 
+   
+
 
     const [users, setUsers] = useState<User[] | null>([])
 
@@ -66,7 +56,7 @@ export default function () {
     }, [])
 
     const handleGetUsers = async () => {
-        
+
         try {
             const data = await (await axios.get(url)).data
             setUsers(data)
@@ -77,24 +67,24 @@ export default function () {
     }
     return (
         <>
-            {/* <Cards/> */}
             <div className="usertable-container">
 
 
                 <div className="users-table table-container">
-                    {
-                        clicked.filter ? (<Filter />) : null
-                    }
+
 
                     <table onClick={() => {
                         setClicked({ ...initial, filter: false, options: false });
                     }}>
                         <thead className="thead">
-
+                        {
+                                    clicked.filter ? (<Filter />) : null
+                                }
 
                             <tr className="thead">
+                               
                                 <td className="organization">
-                                    ORGANIZATION  <BsFilter className="pointer" onClick={(e) => { e.stopPropagation(); setClicked({ ...initial, filter: !clicked.filter }) }} />
+                                    ORGANIZATION   <BsFilter className="pointer" onClick={(e) => { e.stopPropagation(); setClicked({ ...initial, filter: !clicked.filter }) }} />
                                 </td>
                                 <td>
                                     USERNAME  <BsFilter className="pointer" onClick={(e) => { e.stopPropagation(); setClicked({ ...initial, filter: !clicked.filter }) }} />
@@ -127,11 +117,11 @@ export default function () {
 
                                         <td>
 
-                                            {user.profile.firstName}
+                                            {user.userName}
                                         </td>
 
                                         <td>
-                                            {user.email}
+                                            {user.email.toLowerCase()}
                                         </td>
 
                                         <td className="phone">
@@ -158,7 +148,7 @@ export default function () {
                                                         <div className="icon">
                                                             <img src={view} alt="view" />
                                                         </div>
-                                                        <Link to={`user/${user.id}`} className="text" style={{textDecoration:"none", color:"#213F7D"}} >
+                                                        <Link to={`user/${user.id}`} className="text" style={{ textDecoration: "none", color: "#213F7D" }} >
                                                             View Details
                                                         </Link>
                                                     </div>

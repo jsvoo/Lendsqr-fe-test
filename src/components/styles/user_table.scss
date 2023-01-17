@@ -31,23 +31,17 @@
         font-family: "Work Sans";
         font-style: normal;
         border-collapse: collapse;
-        width: 1257px;
+        width: 1300px;
+        // width: 100%;
         margin: auto;
         text-align: left;  
  
 
-        // thead {
-            th {
+        thead  td{ 
                 font-weight: 600;
-                padding: 20px 0px 0px 10px;
-                // padding-left: 15px;
+                padding: 15px;  
                 font-size: map-get($map: $font-sizes, $key: "small"); 
-                // width: 200px;
-
-                
-            }
-
-        // }
+            } 
 
         tbody {
             font-weight: 100;
@@ -59,6 +53,7 @@
                     font-size: 14px;
                     font-weight: 100;
                     width: 30px;
+                    justify-items: start;
                     overflow-wrap: break-word;
 
                    

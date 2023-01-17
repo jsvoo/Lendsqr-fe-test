@@ -80,7 +80,7 @@ body {
   display: none;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 565px) {
   .navigation-container {
     display: none;
   }
@@ -92,7 +92,7 @@ body {
     padding: 10px;
   }
   .mobile-nav .logo-section {
-    width: 30%;
+    width: 50%;
   }
   .mobile-nav .logo-section img {
     width: 100%;
@@ -106,7 +106,7 @@ body {
     border: none;
   }
   .mobile-nav .profile-section {
-    width: 60%;
+    width: 40%;
     justify-content: flex-start;
     gap: 10px;
     margin-left: 10px;
@@ -151,5 +151,23 @@ body {
   }
   .mobile-menu-content .docs-section a {
     color: #213F7D;
+  }
+}
+@media (max-width: 873px) {
+  .navigation-body {
+    position: fixed;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    margin: auto;
+    padding: 10px;
+    background-color: #ffffff;
+  }
+  .navigation-body .logo-section {
+    width: 20%;
+  }
+  .navigation-body .logo-section img {
+    width: 100%;
   }
 }/*# sourceMappingURL=navigation.css.map */
