@@ -1,9 +1,12 @@
+.login_container {
+  background-color: #ffffff;
+}
 .login_container * {
   font-family: "Avenir Next Cyr";
 }
 .login_container .logo-section {
   width: 173px;
-  margin: 70px;
+  margin: 40px;
 }
 .login_container .logo-section img {
   width: 100%;
@@ -17,6 +20,7 @@
   width: 50%;
   margin: auto;
   background-image: url(../images/Rectangle.png);
+  height: 100vh;
 }
 .login_container .body .banner-section .banner img, .login_container .body .form-section .banner img {
   width: 100%;
@@ -25,6 +29,7 @@
   background-image: none;
   background-color: #ffffff;
   padding: 30px;
+  height: 100%;
 }
 .login_container .body .form-section .header {
   margin-bottom: 50px;
@@ -85,6 +90,7 @@
   .login_container .body .banner-section, .login_container .body .form-section {
     width: 95%;
     margin: auto;
+    height: 100%;
   }
   .login_container .body .banner-section .input-container, .login_container .body .form-section .input-container {
     width: 100%;

@@ -7,11 +7,11 @@
     * {
         font-family: 'Avenir Next Cyr';
     }
-
+background-color: #ffffff;
     .logo-section {
         width: 173px;
-        margin: 70px;
-
+        margin: 40px; 
+        
         img {
             width: 100%;
         }
@@ -20,12 +20,14 @@
     .body {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: center; 
 
         .banner-section {
             width: 50%;
             margin: auto;
             background-image: url(../images/Rectangle.png);
+            height: 100vh;
+            
 
 
 
@@ -44,8 +46,8 @@
             @extend .banner-section;
             background-image: none;
             background-color: #ffffff;
-            padding: 30px;
-
+            padding: 30px; 
+            height: 100%;
             .header {
                 margin-bottom: 50px;
 
@@ -127,6 +129,7 @@
     .login_container .body .banner-section, .login_container .body .form-section {
        width: 95%;
        margin: auto;
+       height: 100%;
 
        .input-container{
         width: 100%;
