@@ -8,6 +8,7 @@
     width: 70%;
     top: 90px;
     font-family: "Work Sans"; 
+    margin-right:30px;
 
 
 
@@ -29,6 +30,7 @@
                 color: #545F7D;
                 font-size: map-get($map: $font-sizes, $key: "normal");
                 cursor: pointer;
+                text-decoration: none
             }
         }
 

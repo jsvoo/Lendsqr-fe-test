@@ -9,6 +9,7 @@
     left:0;
     right:0;
     width: 98%;
+    overflow-x: scroll;
 }
 
 .users-table {
@@ -22,17 +23,17 @@
     overflow-x: scroll;
     z-index: 10; 
     box-shadow: 0px 0px 5px 1px grey;
-
+    padding: 35px;
 
 
     table {
-        padding: 15px;
+        
         font-family: "Work Sans";
         font-style: normal;
         border-collapse: collapse;
-        width: 1057px;
+        width: 1257px;
         margin: auto;
-        text-align: left;
+        text-align: left;  
  
 
         // thead {
