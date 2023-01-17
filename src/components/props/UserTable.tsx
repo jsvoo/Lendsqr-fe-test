@@ -41,8 +41,8 @@ export type User = {
     ]
 }
 export const url = "https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users"
-export default function () {
-    const [initial, setInitial] = useState<{ filter: boolean, options: boolean }>({ filter: false, options: false })
+export default function UserTable() {
+    const [initial] = useState<{ filter: boolean, options: boolean }>({ filter: false, options: false })
     const [clicked, setClicked] = useState({ ...initial })
     const [optionId, setOptionId] = useState<string>("") 
    

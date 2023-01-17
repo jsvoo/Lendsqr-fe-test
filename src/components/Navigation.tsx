@@ -1,11 +1,10 @@
 import "./styles/navigation.css"
 import logo from "./images/logo.svg"
-import bell from "./images/bell.png"
-import avatar1 from "./images/avatar.png"
+import bell from "./images/bell.png" 
 import { Link } from "react-router-dom";
 import { AiOutlineSearch, AiFillCaretDown, AiOutlineMenu, AiOutlineClose } from "react-icons/ai"
 import { useState, useEffect } from "react";
-import { User } from "./props/User_table";
+import { User } from "./props/UserTable";
 
 export default function Navigation() {
     const [clickedMenu, setClickedMenu] = useState<boolean>(false)

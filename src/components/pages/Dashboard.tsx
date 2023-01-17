@@ -1,8 +1,8 @@
 import Navigation from "../Navigation";
-import Sidebar from "../Sidebar";
-import User_details from "./User_details";
+import Sidebar from "../Sidebar"; 
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom"; 
+import UserDetails from "./UserDetails";
 export default function UserDetailsPage(){
     const navigate = useNavigate()
 
@@ -15,6 +15,6 @@ useEffect(() => {
     return(<div>
         <Navigation/>
         <Sidebar/>
-        <User_details/>
+        <UserDetails/>
     </div>)
 }

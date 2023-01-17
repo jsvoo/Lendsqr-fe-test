@@ -4,10 +4,10 @@ import avatar from "../icons/avatar.png";
 import tier from "../icons/tier.png";
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react"
-import { url, User } from "../props/User_table";
+import { url, User } from "../props/UserTable";
 import axios from "axios"
 
-export default function User_details() {
+export default function UserDetails() {
 
     const [user, setUser] = useState<User>()
     const { id } = useParams()

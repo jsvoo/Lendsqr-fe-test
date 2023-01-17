@@ -2,12 +2,11 @@ import "../styles/login.css"
 import logo from "../images/logo.svg"
 import banner from "../images/loginBanner.png"
 import { useState, useEffect } from "react"
-import { url, User } from "../props/User_table"
+import { url, User } from "../props/UserTable"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 export default function Login() {
-    const [users, setUsers] = useState<User[]>([])
-    const [user, setUser] = useState<User | null>(null)
+    const [users, setUsers] = useState<User[]>([]) 
     const [input, setInput] = useState<{ email: string, password: string, error: string }>({ email: "", password: "", error: "" })
     const [emptyField, setEmptyField] = useState<boolean>(false)
     const navigate = useNavigate()

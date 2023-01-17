@@ -1,6 +1,6 @@
 import "../styles/filter.css"; 
 
-export default function () {
+export default function Filter () {
     return (
         <div className="filter-container">
             <div className="parameter-section">
