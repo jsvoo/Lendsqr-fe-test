@@ -45,7 +45,7 @@
     }
 }
 
-// .sidebar-toggle-off,  .sidebar-toggle-on{display: none;}
+.sidebar-toggle-off,  .sidebar-toggle-on{display: none;}
 
 @media(max-width:425px){ 
     .sidebar-toggle-on{
@@ -85,8 +85,12 @@
             }
 
 
-        }
-            
+        } 
         
+    }
+
+    .hide-sidebar{
+        width: 0;
+        padding: 0;
     }
 }

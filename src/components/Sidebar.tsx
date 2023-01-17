@@ -1,5 +1,5 @@
 import "./styles/sidebar.css"
-import { AiFillLeftCircle, AiOutlineDown } from "react-icons/ai";
+import { AiFillLeftCircle, AiOutlineDown, AiFillRightCircle } from "react-icons/ai";
 import users from "./icons/users.png"
 import home from "./icons/home.png"
 import guarantors from "./icons/guarantors.png"
@@ -21,14 +21,25 @@ import reports from "./icons/reports.png"
 import preferences from "./icons/preferences.png"
 import audit from "./icons/audit.png"
 import { useState } from "react";
-import { BsLayoutTextSidebar } from "react-icons/bs"
-import { AiFillRightCircle } from "react-icons/ai"
 export default function Sidebar() {
 
     const [toggleSidebar, setToggleSidebar] = useState<boolean>(false)
 
     return (
-        <div className={toggleSidebar ? "sidebar-container" : "sidebar-container "}> 
+        <div className={toggleSidebar?"sidebar-container ":"sidebar-container hide-sidebar"} >
+            {
+                toggleSidebar ? (
+                    <button className="sidebar-toggle-off" onClick={()=>setToggleSidebar(false)}>
+                        <AiFillLeftCircle />
+                    </button>
+                ) : (
+                    <button className="sidebar-toggle-on" onClick={()=>setToggleSidebar(true)}>
+                        <AiFillRightCircle />
+                    </button>
+                )
+            }
+
+
 
             <div className="sidebar-item">
                 <div className="icon">
