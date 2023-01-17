@@ -6,7 +6,8 @@
     padding: 10px;
     box-shadow: 0px 0px 5px 1px grey;
     position: absolute;
-    top: 33%;
+    top: 5%;
+    left: 0;
     left:15px;
     border-radius: 4px;
     width: 260px;
@@ -70,19 +71,18 @@
 
 @media(max-width:"1110px"){
     .filter-container { 
-        top: 37%; 
+        top: 5.7%; 
     }
 }
 
 @media(max-width:"671px"){
     .filter-container { 
-        top: 54%; 
+        top: 10.7%; 
     }
 }
-@media(max-width:"425px"){
+@media(max-width:"428px"){
     .filter-container { 
-        top:66%;
-        width: 200px;
-        left: 8px;  
+        top:16.3%;
+        width: 200px; 
     }
 }

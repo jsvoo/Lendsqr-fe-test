@@ -42,7 +42,13 @@
   display: none;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 853px) {
+  .sidebar-container {
+    z-index: 1;
+    width: 24%;
+  }
+}
+@media (max-width: 565px) {
   .sidebar-toggle-on {
     display: block;
     position: fixed;
