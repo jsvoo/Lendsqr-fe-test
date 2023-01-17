@@ -134,7 +134,7 @@ export default function User_details() {
                                             <tr>
                                                 <td>{user.profile.firstName} {user.profile.lastName}</td>
                                                 <td>{user.phoneNumber.split('x')[0]}</td>
-                                                <td>{user.email}</td>
+                                                <td>{user.email.toLowerCase()}</td>
                                                 <td>{user.profile.bvn}</td>
                                                 <td>{user.profile.gender}</td>
                                             </tr>

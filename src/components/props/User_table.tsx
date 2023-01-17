@@ -127,11 +127,11 @@ export default function () {
 
                                         <td>
 
-                                            {user.profile.firstName}
+                                            {user.userName}
                                         </td>
 
                                         <td>
-                                            {user.email}
+                                            {user.email.toLowerCase()}
                                         </td>
 
                                         <td className="phone">
