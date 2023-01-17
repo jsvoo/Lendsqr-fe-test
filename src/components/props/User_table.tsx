@@ -8,12 +8,14 @@ import { BsFilter } from "react-icons/bs"
 import Cards from "./Cards";
 import Filter from "./Filter";
 import Options from "./Options";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { LendsqrUserContextManager } from "../../context/LendsqrUserContext";
 
 export default function () {
     const [initial, setInitial] = useState<{ filter: boolean, options: boolean }>({ filter: false, options: false })
     const [clicked, setClicked] = useState({ ...initial })
-    console.log(clicked)
+    // const{clicked, setClicked} = useContext(LendsqrUserContextManager)
+    // console.log(clicked)
     return (
         <>
             {/* <Cards/> */}
@@ -33,29 +35,29 @@ export default function () {
                         <thead className="thead">
 
 
-                            {/* <tr className="thead"> */}
-                            <th className="organization">
+                            <tr className="thead">
+                            <td className="organization">
                                 ORGANIZATION  <BsFilter className="pointer" onClick={(e) => {e.stopPropagation(); setClicked({ ...initial, filter: !clicked.filter })}} />
-                            </th>
-                            <th>
+                            </td>
+                            <td>
                                 USERNAME  <BsFilter className="pointer" onClick={(e) => {e.stopPropagation(); setClicked({ ...initial, filter: !clicked.filter })}} />
-                            </th>
-                            <th>
+                            </td>
+                            <td>
                                 EMAIL  <BsFilter className="pointer" onClick={(e) =>{e.stopPropagation();  setClicked({ ...initial, filter: !clicked.filter })}} />
-                            </th>
+                            </td>
 
-                            <th className="ph <BsFilter/>one">
+                            <td className="ph <BsFilter/>one">
                                 PHONE NUMBER  <BsFilter className="pointer" onClick={(e) => {e.stopPropagation(); setClicked({ ...initial, filter: !clicked.filter })}} />
-                            </th>
+                            </td>
 
-                            <th className="date">
+                            <td className="date">
                                 DATE JOINED  <BsFilter className="pointer" onClick={(e) => {e.stopPropagation(); setClicked({ ...initial, filter: !clicked.filter })}} />
-                            </th>
+                            </td>
 
-                            <th className="status">
+                            <td className="status">
                                 STATUS  <BsFilter className="pointer" onClick={(e) => {e.stopPropagation(); setClicked({ ...initial, filter: !clicked.filter })}} />
-                            </th>
-                            {/* </tr> */}
+                            </td>
+                            </tr>
                         </thead>
                         <tbody >
                             <tr>

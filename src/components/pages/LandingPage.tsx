@@ -7,8 +7,11 @@ import { useState, useContext } from "react";
 import { LendsqrUserContextManager } from "../../context/LendsqrUserContext";
 
 export default function(){
-    const [clicked, setClicked] = useState<{userDetails:boolean}>({userDetails:false})
-    const {user} = useContext(LendsqrUserContextManager)
+    // const [clicked, setClicked] = useState<{userDetails:boolean}>({userDetails:false})
+    const {clicked} = useContext(LendsqrUserContextManager)  
+//  console.log({...clicked, filter})
+console.log(clicked)
+// setClicked()
     return(
         <div className="landing-page-container"> 
             <Navigation/>
