@@ -1,8 +1,8 @@
 import "./styles/navigation.css"
 import logo from "./images/logo.svg"
-import bell from "./images/bell.png" 
+import bell from "./images/bell.png"
 import { Link } from "react-router-dom";
-import { AiOutlineSearch, AiFillCaretDown, AiOutlineMenu, AiOutlineClose } from "react-icons/ai"
+import { AiOutlineSearch, AiFillCaretDown, AiOutlineMenu, AiOutlineClose, AiOutlineLogout } from "react-icons/ai"
 import { useState, useEffect } from "react";
 import { User } from "./props/UserTable";
 
@@ -49,6 +49,24 @@ export default function Navigation() {
                                 <div className="dropdown">
                                     <span>{user.profile.firstName} <span className="icon"><AiFillCaretDown /></span></span>
                                 </div>
+
+                                <div className="dropdown-content">
+
+                                    <div className="logout-section">
+
+                                         
+                                         <button>
+                                         <AiOutlineLogout className="icon" />
+                                         
+                                         <Link to={"/"}>Logout</Link>
+                                         </button>
+
+                                    </div>
+                                </div>
+
+
+
+
                             </div>
 
                         </div>
@@ -106,6 +124,15 @@ export default function Navigation() {
                                 <div className="alert">
                                     <img src={bell} alt="Alerts" />
                                 </div>
+
+                            </div>
+
+                            <div className="logout-section">
+
+                                
+                                    <button><AiOutlineLogout className="logout-icon" />
+                                
+                                <Link to={"/"}>Logout</Link></button>
 
                             </div>
                         </div>

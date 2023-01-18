@@ -84,6 +84,38 @@ body {
             }
         }
     }
+
+    .dropdown-content {
+         top: 70px; 
+        // right: 0px;
+        position: fixed;
+        z-index: 2;
+        background-color: #fefefe;
+        padding: 20px;
+        width: 200px;
+        border-radius: 5px; 
+ 
+        .logout-section{
+            @include flex-center-center; 
+         
+            button{
+                @include flex-center-center; 
+                background-color: transparent;
+                gap: 10px;
+                border: none;
+
+            }
+
+        }
+        
+
+        .icon { 
+           color: $primary;
+           @include flex-center-center; 
+
+        }
+ 
+    }
 }
 
 .mobile-nav {
@@ -174,6 +206,29 @@ body {
 
             gap: 20px;
         }
+
+        .logout-section{
+            @include flex-center-center; 
+            text-align: center; 
+            gap: 10px; 
+            button{
+                @include flex-center-center; 
+                background-color: transparent;
+                gap: 10px;
+                border: none;
+
+            }
+             .logout-icon { 
+                color: $primary;
+                @include flex-center-center; 
+     
+             }
+
+             a{
+                color: #213F7D;
+              }
+        }
+        
     }
 
 }

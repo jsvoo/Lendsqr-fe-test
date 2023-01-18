@@ -75,6 +75,34 @@ body {
   align-items: center;
   justify-content: center;
 }
+.navigation-body .dropdown-content {
+  top: 70px;
+  position: fixed;
+  z-index: 2;
+  background-color: #fefefe;
+  padding: 20px;
+  width: 200px;
+  border-radius: 5px;
+}
+.navigation-body .dropdown-content .logout-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navigation-body .dropdown-content .logout-section button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  gap: 10px;
+  border: none;
+}
+.navigation-body .dropdown-content .icon {
+  color: #39CDCC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .mobile-nav {
   display: none;
@@ -150,6 +178,30 @@ body {
     gap: 20px;
   }
   .mobile-menu-content .docs-section a {
+    color: #213F7D;
+  }
+  .mobile-menu-content .logout-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .mobile-menu-content .logout-section button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    gap: 10px;
+    border: none;
+  }
+  .mobile-menu-content .logout-section .logout-icon {
+    color: #39CDCC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mobile-menu-content .logout-section a {
     color: #213F7D;
   }
 }
