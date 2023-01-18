@@ -97,6 +97,9 @@ body {
   gap: 10px;
   border: none;
 }
+.navigation-body .dropdown-content .logout-section button:hover {
+  text-decoration: underline;
+}
 .navigation-body .dropdown-content .icon {
   color: #39CDCC;
   display: flex;

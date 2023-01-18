@@ -104,6 +104,10 @@ body {
                 gap: 10px;
                 border: none;
 
+                &:hover{
+                    text-decoration: underline;
+                }
+
             }
 
         }
