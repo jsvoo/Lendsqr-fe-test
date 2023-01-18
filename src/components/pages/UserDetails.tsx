@@ -107,7 +107,7 @@ export default function UserDetails() {
 
 
                     </div>
-                ) : <p>Loading unser information, please wait...</p>
+                ) : <p>Loading user information, please wait...</p>
             }
 
             {
