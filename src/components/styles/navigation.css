@@ -201,8 +201,9 @@ body {
     align-items: center;
     justify-content: center;
   }
-  .mobile-menu-content .logout-section a {
+  .mobile-menu-content .logout-section .link {
     color: #213F7D;
+    text-decoration: underline;
   }
 }
 @media (max-width: 873px) {

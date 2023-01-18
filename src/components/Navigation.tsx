@@ -1,7 +1,7 @@
 import "./styles/navigation.css"
 import logo from "./images/logo.svg"
 import bell from "./images/bell.png"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineSearch, AiFillCaretDown, AiOutlineMenu, AiOutlineClose, AiOutlineLogout } from "react-icons/ai"
 import { useState, useEffect } from "react";
 import { User } from "./props/UserTable";
@@ -9,6 +9,7 @@ import { User } from "./props/UserTable";
 export default function Navigation() {
     const [clickedMenu, setClickedMenu] = useState<boolean>(false)
     const [user, setUser] = useState<User | null>(null)
+    const navigate = useNavigate()
 
     useEffect(() => {
         const loggedInUser = localStorage.getItem("lendsqrUser") || ""
@@ -17,6 +18,14 @@ export default function Navigation() {
             setUser(JSON.parse(loggedInUser))
         }
     }, [])
+
+
+    function handleLogout(){
+        localStorage.removeItem("lendsqrUser")
+        navigate("/login")
+    }
+
+
     return (
         <div className="all-screen-navs-container">
 
@@ -55,10 +64,13 @@ export default function Navigation() {
                                     <div className="logout-section">
 
                                          
-                                         <button>
+                                         <button className="pointer" onClick={(e)=>{
+                                            e.preventDefault();
+                                            handleLogout()
+                                         }}>
                                          <AiOutlineLogout className="icon" />
                                          
-                                         <Link to={"/"}>Logout</Link>
+                                           Logout 
                                          </button>
 
                                     </div>
@@ -130,9 +142,14 @@ export default function Navigation() {
                             <div className="logout-section">
 
                                 
-                                    <button><AiOutlineLogout className="logout-icon" />
+                                    <button
+                                    onClick={(e)=>{
+                                        e.preventDefault();
+                                        handleLogout()
+                                     }}
+                                    ><AiOutlineLogout className="logout-icon" />
                                 
-                                <Link to={"/"}>Logout</Link></button>
+                                <div className="link">Logout</div></button>
 
                             </div>
                         </div>
