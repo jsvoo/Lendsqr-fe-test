@@ -14,7 +14,7 @@
 
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 Lendqsr\_fe\_test ](#-lendqsr_fe_test-)
-  - [🛠 Built With React Typescript and SCSS](#-built-with-react-typescript-and-scss)
+  - [🛠 Built With  Typescript React and SCSS](#-built-with--typescript-react-and-scss)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
@@ -34,7 +34,7 @@
 
 **Lendsqr_fe_test** is an app built to access the author's abilities in front-end development with TypeScript React and SASS.
 
-## 🛠 Built With <a name="built-with">React Typescript and SCSS</a>
+## 🛠 Built With <a name="built-with"> Typescript React and SCSS</a>
 
 ### Tech Stack <a name="tech-stack"></a>
  
@@ -59,9 +59,10 @@
 ### Key Features <a name="key-features"></a>
 
 
-- **Login** Users are able to login using their registered email with their BVN as password.
-- **View Users** The user_table shows the summary of all users
-- **View User Details** From the user_table, clicking "view details" on a user will take take you to the user's dashboard with full details of the user
+- **Login :** Users are able to login using their registered email with their BVN as password.
+- **View Users :** The user_table shows the summary of all users
+- **View User Details :** From the user_table, clicking "view details" on a user will take take you to the user's dashboard with full details of the user
+- **NOTE :** You need to be logged in to access the full app. Check Frequently Asked Questions below for details.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -82,7 +83,7 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need: node package manager (npm)
+In order to run this project you need: `Node Package Manager (npm)` 
 
  
 
@@ -96,7 +97,7 @@ git clone https://github.com/jsvoo/Onoja-Victor-Lendsqr-fe-test.git
 
 ### Install
 
-Install this project with: "npm install" or "yarn install"
+Install this project with: `npm install` 
 
  
 
