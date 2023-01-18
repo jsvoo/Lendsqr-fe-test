@@ -46,7 +46,7 @@
   color: #213F7D;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 565px) {
   .cards-container, .userdetails-container {
     position: absolute;
     left: 0;
