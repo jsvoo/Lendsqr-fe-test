@@ -13,6 +13,10 @@
   overflow-y: scroll;
   background-color: #FEFEFE;
 }
+.sidebar-container .selected {
+  background-color: #F3FCFC;
+  border-left: 3px solid #39CDCC;
+}
 .sidebar-container .head {
   font-size: 14px !important;
   font-weight: 500 !important;
@@ -24,6 +28,7 @@
   color: #2c53a5;
   gap: 10px;
   margin: 10px 0px;
+  padding-left: 10px;
 }
 .sidebar-container .sidebar-item .text {
   font-size: 16px;

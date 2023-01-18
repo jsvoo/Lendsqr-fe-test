@@ -68,7 +68,7 @@ export default function Sidebar() {
             </div>
 
 
-            <div className="sidebar-item">
+            <div className="sidebar-item selected">
                 <div className="icon">
                     <img src={users} alt="icon" />
                 </div>

@@ -14,7 +14,10 @@
     overflow-y: scroll;
     background-color: #FEFEFE;
     
-
+.selected{
+    background-color: #F3FCFC;
+    border-left: 3px solid #39CDCC;
+}
 
     .head{
         font-size: map-get($map: $font-sizes, $key:"normal" ) !important;
@@ -27,6 +30,7 @@
         color: lighten($text-primary, 10%);
         gap: 10px;
         margin: 10px 0px;
+        padding-left: 10px;
 
         .text {
             font-size: map-get($map: $font-sizes, $key: "mid");
