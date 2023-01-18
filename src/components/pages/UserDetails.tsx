@@ -68,7 +68,7 @@ export default function UserDetails() {
 
                                 <div className="name-section">
                                     <div className="name">
-                                        {user.profile.firstName}
+                                        { `${user.profile.firstName} ${user.profile.lastName}`}
                                     </div>
                                     <p>{user.accountNumber}</p>
                                 </div>
