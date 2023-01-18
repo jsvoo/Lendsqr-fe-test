@@ -5,7 +5,7 @@
 
 .sidebar-container {
   font-family: "Work Sans";
-  width: 21%;
+  width: 22%;
   padding: 40px 20px;
   position: fixed;
   top: 50px;
@@ -41,7 +41,6 @@
 .sidebar-container .selected {
   background-color: #F3FCFC;
   border-left: 3px solid #39CDCC;
-  margin: 0px;
 }
 
 .sidebar-toggle-off, .sidebar-toggle-on {
