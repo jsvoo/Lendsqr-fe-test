@@ -135,6 +135,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 👤 **Onoja Victor**
 
 - GitHub: [@jsvoo](https://github.com/jsvoo) 
+- LinkedIn: [@jsvoo](linkedin.com/in/victor-ojogbane-onoja-52a077145) 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
