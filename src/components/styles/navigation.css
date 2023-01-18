@@ -96,6 +96,7 @@ body {
   background-color: transparent;
   gap: 10px;
   border: none;
+  color: #213F7D;
 }
 .navigation-body .dropdown-content .logout-section button:hover {
   text-decoration: underline;
