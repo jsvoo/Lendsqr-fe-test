@@ -2,10 +2,10 @@
 
  
 <div align="center"> 
-  <img src="logo.svg" alt="logo" width="140"  height="auto" />
+  <img src="logo.svg" alt="logo" width="240"  height="auto" />
   <br/>
 
-  <h3><b>Lendsqr Application README </b></h3>
+  <h3><b>Lendsqr_fe_test README </b></h3>
 
 </div>
  
@@ -59,9 +59,9 @@
 ### Key Features <a name="key-features"></a>
 
 
-- **[Login]** Users are able to login using their registered email with their BVN as password.
-- **[Dashboard]** The dashboard shows the summary of all users
-- **[User_Details]** From the dashboard, clicking "view details" on a user will take take you to the user's full details page
+- **Login** Users are able to login using their registered email with their BVN as password.
+- **View Users** The user_table shows the summary of all users
+- **View User Details** From the user_table, clicking "view details" on a user will take take you to the user's dashboard with full details of the user
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -76,22 +76,15 @@
 
  
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
+ 
 
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
+In order to run this project you need: node package manager (npm)
 
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
+ 
 
 ### Setup
 
@@ -140,19 +133,17 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 👤 **Onoja Victor**
 
-- GitHub: [@githubhandle](https://github.com/jsvoo) 
+- GitHub: [@jsvoo](https://github.com/jsvoo) 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
    
 
-<!-- FAQ (optional) -->
-
+ 
 ## ❓ FAQ <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
+ 
 - **What details can I use to login on the app?**
 
   - You can access the app by logging in with any of the users from this enpoint https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users. Use the user's email for the email field, and their BVN as password.
@@ -163,8 +154,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LICENSE -->
-
+ 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
