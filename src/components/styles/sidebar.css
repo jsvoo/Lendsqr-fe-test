@@ -13,10 +13,6 @@
   overflow-y: scroll;
   background-color: #FEFEFE;
 }
-.sidebar-container .selected {
-  background-color: #F3FCFC;
-  border-left: 3px solid #39CDCC;
-}
 .sidebar-container .head {
   font-size: 14px !important;
   font-weight: 500 !important;
@@ -41,6 +37,11 @@
   margin-left: 5px;
   color: #213F7D;
   width: 16px;
+}
+.sidebar-container .selected {
+  background-color: #F3FCFC;
+  border-left: 3px solid #39CDCC;
+  margin: 0px;
 }
 
 .sidebar-toggle-off, .sidebar-toggle-on {
