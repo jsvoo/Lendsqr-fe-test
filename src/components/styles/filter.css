@@ -74,4 +74,14 @@
     top: 16.3%;
     width: 200px;
   }
+  .filter-container .buttons {
+    gap: 10px;
+  }
+  .filter-container .buttons button {
+    width: 50%;
+    text-align: center;
+  }
+  .filter-container .buttons button:first-child {
+    padding: 10px 20px;
+  }
 }/*# sourceMappingURL=filter.css.map */

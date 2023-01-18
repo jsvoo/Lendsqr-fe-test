@@ -8,7 +8,7 @@
     position: absolute;
     top: 5%;
     left: 0;
-    left:15px;
+    left: 15px;
     border-radius: 4px;
     width: 260px;
     background-color: $light;
@@ -30,59 +30,60 @@
             color: #545F7D;
         }
 
-        .date-label{
+        .date-label {
             width: 700px !important;
-            height: 20px; 
+            height: 20px;
             background-color: red;
         }
 
-        // .date{
-        //     // width: 0px;
-        //     // height:0px;
-        //     z-index: 1;
-
-        //     // &::before{
-        //     //     content: "wewedcc";
-        //     //     @include input-style;
-        //     //     position: absolute;
-        //     //     width: 80%;
-        //     //     margin: auto;
-        //     //     left: 5px; 
-        //     //     top: 300px
-        //     // }
-        // }
 
     }
 
     .buttons {
-        @include flex-align-center ;
+        @include flex-align-center;
         @include justify-around;
         width: 100%;
         margin: 15px 0px;
+
         button:first-child {
             @include button(2px solid #545F7D, $light, #213F7D, )
-        } 
-         button:last-child {
+        }
+
+        button:last-child {
             @include button(none, $primary, $light, )
         }
     }
 }
 
 
-@media(max-width:"1110px"){
-    .filter-container { 
-        top: 5.7%; 
+@media(max-width:"1110px") {
+    .filter-container {
+        top: 5.7%;
     }
 }
 
-@media(max-width:"671px"){
-    .filter-container { 
-        top: 10.7%; 
+@media(max-width:"671px") {
+    .filter-container {
+        top: 10.7%;
     }
 }
-@media(max-width:"428px"){
-    .filter-container { 
-        top:16.3%;
-        width: 200px; 
+
+@media(max-width:"428px") {
+    .filter-container {
+        top: 16.3%;
+        width: 200px;
+
+        .buttons {
+            gap: 10px;
+
+            button {
+                width: 50%;
+                text-align: center;
+
+            }
+            button:first-child {
+                padding: 10px 20px;
+            }
+        }
     }
 }
