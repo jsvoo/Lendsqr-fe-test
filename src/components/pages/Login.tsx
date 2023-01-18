@@ -90,7 +90,7 @@ export default function Login() {
                             <div className="email-section input-container ">
                                 <input type="text"
                                     className={!emptyField && input.email === "" ? "" : "error"}
-                                    placeholder={!emptyField && input.email === "" ? "Email" : ("Email field is required field")}
+                                    placeholder={!emptyField && input.email === "" ? "Email" : ("Email is required")}
                                     name="email"
                                     onChange={(event) => { handleChange(event); setEmptyField(false) }}
                                     value={input.email}
@@ -103,7 +103,7 @@ export default function Login() {
                                     onChange={(event) => handleChange(event)}
                                     value={input.password}
                                     className={!emptyField && input.password === "" ? "" : "error"}
-                                    placeholder={!emptyField && input.password === "" ? "Password" : ("Password filed is required field")}
+                                    placeholder={!emptyField && input.password === "" ? "Password" : ("Password is required ")}
                                 />
                                 <span className="show">SHOW</span>
                             </div>
