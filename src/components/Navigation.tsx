@@ -8,6 +8,7 @@ import { User } from "./props/UserTable";
 
 export default function Navigation() {
     const [clickedMenu, setClickedMenu] = useState<boolean>(false)
+    const [clickedDropdown, setClickedDropdown] = useState<boolean>(false)
     const [user, setUser] = useState<User | null>(null)
     const navigate = useNavigate()
 
@@ -20,7 +21,7 @@ export default function Navigation() {
     }, [])
 
 
-    function handleLogout(){
+    function handleLogout() {
         localStorage.removeItem("lendsqrUser")
         navigate("/login")
     }
@@ -56,25 +57,29 @@ export default function Navigation() {
                                 </div>
 
                                 <div className="dropdown">
-                                    <span>{user.profile.firstName} <span className="icon"><AiFillCaretDown /></span></span>
+                                    <span>{user.profile.firstName} <span className="icon" onClick={()=>setClickedDropdown(!clickedDropdown)}><AiFillCaretDown /></span></span>
                                 </div>
 
-                                <div className="dropdown-content">
+                                {
+                                    clickedDropdown && (
+                                        <div className="dropdown-content">
 
-                                    <div className="logout-section">
+                                            <div className="logout-section">
 
-                                         
-                                         <button className="pointer" onClick={(e)=>{
-                                            e.preventDefault();
-                                            handleLogout()
-                                         }}>
-                                         <AiOutlineLogout className="icon" />
-                                         
-                                           Logout 
-                                         </button>
 
-                                    </div>
-                                </div>
+                                                <button className="pointer" onClick={(e) => {
+                                                    e.preventDefault();
+                                                    handleLogout()
+                                                }}>
+                                                    <AiOutlineLogout className="icon" />
+
+                                                    Logout
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                    )
+                                }
 
 
 
@@ -141,15 +146,15 @@ export default function Navigation() {
 
                             <div className="logout-section">
 
-                                
-                                    <button
-                                    onClick={(e)=>{
+
+                                <button
+                                    onClick={(e) => {
                                         e.preventDefault();
                                         handleLogout()
-                                     }}
-                                    ><AiOutlineLogout className="logout-icon" />
-                                
-                                <div className="link">Logout</div></button>
+                                    }}
+                                ><AiOutlineLogout className="logout-icon" />
+
+                                    <div className="link">Logout</div></button>
 
                             </div>
                         </div>
