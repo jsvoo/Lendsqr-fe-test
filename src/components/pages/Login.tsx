@@ -48,7 +48,7 @@ export default function Login() {
             if (user.email.toLowerCase() === input.email.toLowerCase()) { 
                 if (user.profile.bvn === input.password) {
                     setInput({ ...input, error: " " })
-                    localStorage.setItem("user", JSON.stringify(user))
+                    localStorage.setItem("lendsqrUser", JSON.stringify(user))
                     navigate("/")
                 } else {
                     setInput({ ...input, error: "Invalid password. Please use your BVN as password" })

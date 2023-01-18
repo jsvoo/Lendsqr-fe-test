@@ -11,7 +11,7 @@ export default function Navigation() {
     const [user, setUser] = useState<User | null>(null)
 
     useEffect(() => {
-        const loggedInUser = localStorage.getItem("user") || ""
+        const loggedInUser = localStorage.getItem("lendsqrUser") || ""
         if (loggedInUser) {
 
             setUser(JSON.parse(loggedInUser))

@@ -9,7 +9,7 @@ export default function LandingPage(){
 const navigate = useNavigate()
 
 useEffect(() => {
-    const loggedInUser = localStorage.getItem("user") || ""
+    const loggedInUser = localStorage.getItem("lendsqrUser") || ""
     if (!loggedInUser) {
        navigate("/login")
     }
