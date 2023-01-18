@@ -2,7 +2,7 @@ import "../styles/filter.css";
 
 export default function Filter () {
     return (
-        <div className="filter-container">
+        <div className="filter-container" onClick={(e)=>e.stopPropagation()}>
             <div className="parameter-section">
                 <div className="parameter">
                     Organization
