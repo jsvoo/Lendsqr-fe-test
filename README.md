@@ -31,8 +31,7 @@
  
 
 # 📖 Lendqsr_fe_test <a name="about-project"></a> 
-
-**Lendsqr_fe_test** is an app built to access the author's abilities in front-end development with TypeScript React and SASS.
+ 
 
 ## 🛠 Built With <a name="built-with"> Typescript React and SCSS</a>
 
